@@ -393,7 +393,7 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   transition: box-shadow 0.2s; position: relative;
   display: flex; flex-direction: column;
 }
-.format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.format-card { cursor: pointer; } .format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); transition: box-shadow .2s, transform .2s; }
 .format-card.featured {
   border-color: var(--text); border-width: 1.5px;
   background: var(--text);
@@ -427,10 +427,11 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
 .format-card.featured .format-list li,
 .format-card.featured .format-list li::before { color: rgba(248,246,242,0.6); }
 .format-price {
-  display: inline-block; margin-top: 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 20px;
   font-size: 13px; font-weight: 600; color: var(--text);
   padding: 9px 18px; background: var(--surface-2);
-  border-radius: 7px; width: 100%; text-align: center;
+  border-radius: 7px; width: 100%;
 }
 
 /* ════════════════════════════
@@ -850,7 +851,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
       <h2 class="section-title">Форматы работы</h2>
     </div>
     <div class="formats-grid">
-      <div class="format-card reveal">
+      <div class="format-card reveal" onclick="window.location='diagnostics_v2.html'">
         <div class="format-badge-row">
           <div class="format-num">01</div>
         </div>
@@ -867,7 +868,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
         </div>
       </div>
 
-      <div class="format-card featured reveal reveal-delay-1">
+      <div class="format-card featured reveal reveal-delay-1" onclick="window.location='strategy_v3.html'">
         <div class="format-badge-row">
           <div class="format-num" style="color:rgba(248,246,242,0.4)">02</div>
           <div class="format-badge">Глубокая проработка</div>
@@ -881,11 +882,11 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
         </ul>
         <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
           <span>от 800 000 ₽</span>
-          <a href="strategy_v3.html" style="font-size:12px;color:rgba(248,246,242,0.6);font-weight:500">Подробнее →</a>
+          <a href="strategy_v3.html" style="font-size:12px;color:#1a5c36;font-weight:500">Подробнее →</a>
         </div>
       </div>
 
-      <div class="format-card reveal reveal-delay-2">
+      <div class="format-card reveal reveal-delay-2" onclick="window.location='partnership_v2.html'">
         <div class="format-badge-row">
           <div class="format-num">03</div>
         </div>
