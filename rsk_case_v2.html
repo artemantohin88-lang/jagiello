@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс «РСК ШАЛЕ» — Артём Ягелло</title>
+<meta name="description" content="Выход завода металлоконструкций в новую отрасль и рост выручки на 21% за 8 месяцев. Кейс Артёма Ягелло.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #f8f6f2;
+  --surface:  #ffffff;
+  --s2:       #f2efe9;
+  --border:   #e6e1d9;
+  --b2:       #cdc6bb;
+  --text:     #18160f;
+  --t2:       #68635a;
+  --t3:       #a8a29a;
+  --green:    #1a5c36;
+  --gbg:      #eaf2ed;
+  --green2:   #2d8a55;
+  --green3:   #52b788;
+  --blue:     #1d3a5f;
+  --bbg:      #eef2f8;
+  --red:      #8b1a1a;
+  --rbg:      #fdf0f0;
+  --r: 10px;
+}
+html { scroll-behavior: smooth; }
+body { background:var(--bg); color:var(--text); font-family:'Instrument Sans',sans-serif; font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration:none; }
+
+/* REVEAL */
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease,transform 0.65s ease; }
+.reveal.in { opacity:1; transform:none; }
+.d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s} .d4{transition-delay:.4s}
+
+/* NAV */
+nav { position:sticky; top:0; z-index:100; background:rgba(248,246,242,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
+.nav-i { max-width:1180px; margin:0 auto; padding:0 32px; height:60px; display:flex; align-items:center; justify-content:space-between; }
+.nav-back { font-size:13px; color:var(--t2); display:flex; align-items:center; gap:6px; transition:color .15s; }
+.nav-back:hover { color:var(--text); }
+.nav-back::before { content:'←'; }
+.nav-logo { font-size:14px; font-weight:600; }
+.nav-cta { background:var(--text); color:var(--bg); font-size:13px; font-weight:500; padding:8px 18px; border-radius:7px; transition:opacity .15s; }
+.nav-cta:hover { opacity:.8; }
+
+/* LAYOUT */
+.wrap { max-width:1180px; margin:0 auto; padding:0 32px; }
+.sec { padding:72px 0; border-bottom:1px solid var(--border); }
+
+/* ══════════════ HERO ══════════════ */
+.hero { padding:88px 0 80px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(circle,#c8c0b4 1px,transparent 1px);
+  background-size:28px 28px; opacity:.28; pointer-events:none;
+}
+.hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:180px; background:linear-gradient(transparent,var(--bg)); pointer-events:none; }
+.hero-z { position:relative; z-index:1; }
+
+.crumb { display:flex; align-items:center; gap:8px; font-size:11.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--t3); margin-bottom:32px; }
+.crumb::before { content:''; width:20px; height:1px; background:var(--t3); }
+.crumb span { color:var(--t2); }
+
+.hero-g { display:grid; grid-template-columns:1fr 500px; gap:72px; align-items:start; }
+
+.case-chip { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--t2); background:var(--surface); border:1px solid var(--border); padding:6px 14px; border-radius:20px; margin-bottom:22px; }
+.chip-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+
+h1.htitle { font-family:'Instrument Serif',serif; font-size:clamp(38px,4.8vw,62px); font-weight:400; line-height:1.06; letter-spacing:-.025em; margin-bottom:22px; }
+h1.htitle em { font-style:italic; color:var(--t2); }
+
+.hlead { font-size:17px; line-height:1.7; color:var(--t2); max-width:480px; margin-bottom:32px; }
+
+.hmeta { display:flex; gap:28px; flex-wrap:wrap; padding-top:24px; border-top:1px solid var(--border); }
+.hm { display:flex; flex-direction:column; gap:3px; }
+.hml { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--t3); }
+.hmv { font-size:14px; font-weight:500; }
+
+/* Hero number panel */
+.hn-panel { display:flex; flex-direction:column; gap:12px; }
+
+.hn-main {
+  background:var(--text); border-radius:14px; padding:32px 30px;
+  position:relative; overflow:hidden;
+}
+.hn-main::before {
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.hn-main > * { position:relative; }
+.hn-main-label { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.35); margin-bottom:16px; }
+.hn-main-from { font-family:'Instrument Serif',serif; font-size:22px; color:rgba(248,246,242,.35); letter-spacing:-.02em; }
+.hn-main-arr { font-size:18px; color:rgba(248,246,242,.18); margin:6px 0; }
+.hn-main-to { font-family:'Instrument Serif',serif; font-size:52px; color:#fff; letter-spacing:-.03em; line-height:1; }
+.hn-badge { display:inline-flex; align-items:center; gap:6px; margin-top:14px; background:var(--green2); color:#fff; font-size:15px; font-weight:600; padding:8px 16px; border-radius:7px; }
+
+.hn-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.hn-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 16px; transition:box-shadow .2s; }
+.hn-card:hover { box-shadow:0 3px 14px rgba(0,0,0,.06); }
+.hn-num { font-family:'Instrument Serif',serif; font-size:28px; font-weight:400; letter-spacing:-.02em; line-height:1; color:var(--green); }
+.hn-num.blue { color:var(--blue); }
+.hn-lbl { font-size:11.5px; color:var(--t3); margin-top:5px; line-height:1.4; }
+
+/* ══════════════ CRISIS BAR ══════════════ */
+.crisis-bar {
+  background:var(--rbg); border-top:3px solid var(--red); border-bottom:1px solid var(--border);
+  padding:28px 0;
+}
+.crisis-inner { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.crisis-icon { width:40px; height:40px; border-radius:10px; background:var(--red); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.crisis-icon svg { width:18px; height:18px; stroke:#fff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.crisis-text { font-size:15px; color:var(--red); font-weight:500; flex:1; }
+.crisis-sub { font-size:13.5px; color:var(--t2); }
+
+/* ══════════════ PROBLEM ══════════════ */
+.prob-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.prob-card { border:1px solid var(--border); border-radius:var(--r); padding:24px; background:var(--surface); position:relative; overflow:hidden; }
+.prob-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--red); }
+.prob-n { font-family:'Instrument Serif',serif; font-size:48px; font-weight:400; color:rgba(139,26,26,.1); letter-spacing:-.03em; line-height:1; margin-bottom:8px; }
+.prob-title { font-size:14px; font-weight:600; margin-bottom:6px; }
+.prob-desc { font-size:13.5px; color:var(--t2); line-height:1.6; }
+.prob-impact { margin-top:14px; padding:10px 12px; background:var(--rbg); border-radius:6px; font-size:12.5px; color:var(--red); font-weight:500; }
+
+/* ══════════════ INSIGHT QUOTE ══════════════ */
+.insight {
+  background:var(--text); border-radius:16px; padding:52px 56px;
+  position:relative; overflow:hidden; margin:0;
+}
+.insight::before {
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.insight > * { position:relative; }
+.insight-q { font-family:'Instrument Serif',serif; font-size:clamp(22px,3vw,38px); font-weight:400; color:#fff; line-height:1.25; letter-spacing:-.015em; margin-bottom:20px; }
+.insight-q em { font-style:italic; color:var(--green3); }
+.insight-attr { font-size:13px; color:rgba(248,246,242,.4); display:flex; align-items:center; gap:10px; }
+.insight-attr::before { content:''; width:24px; height:1px; background:rgba(248,246,242,.2); }
+
+/* ══════════════ TIMELINE ══════════════ */
+.tl { display:flex; flex-direction:column; gap:0; position:relative; }
+.tl::before { content:''; position:absolute; left:23px; top:40px; bottom:40px; width:1px; background:var(--border); }
+.tl-item { display:grid; grid-template-columns:56px 1fr; gap:32px; padding:28px 0; border-bottom:1px solid var(--border); align-items:start; position:relative; }
+.tl-item:last-child { border-bottom:none; }
+
+.tl-step {
+  width:46px; height:46px; border-radius:50%; flex-shrink:0;
+  background:var(--surface); border:1.5px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Instrument Serif',serif; font-size:15px; font-style:italic; color:var(--t3);
+  position:relative; z-index:1;
+  transition:background .2s, border-color .2s;
+}
+.tl-item:hover .tl-step { background:var(--text); color:var(--bg); border-color:var(--text); }
+
+.tl-content {}
+.tl-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px; flex-wrap:wrap; }
+.tl-title { font-size:16px; font-weight:600; }
+.tl-period { font-size:11.5px; color:var(--t3); white-space:nowrap; }
+.tl-desc { font-size:14px; color:var(--t2); line-height:1.65; margin-bottom:12px; }
+.tl-tags { display:flex; gap:7px; flex-wrap:wrap; }
+.tl-tag { font-size:11.5px; color:var(--t2); background:var(--s2); border:1px solid var(--border); padding:3px 10px; border-radius:4px; }
+.tl-result { margin-top:14px; display:inline-flex; align-items:center; gap:7px; font-size:13px; font-weight:600; color:var(--green); background:var(--gbg); padding:8px 14px; border-radius:6px; }
+.tl-result::before { content:'→'; }
+.tl-result.blue-r { color:var(--blue); background:var(--bbg); }
+
+/* ══════════════ LINE CHART ══════════════ */
+.linechart-wrap { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:32px; }
+.lc-header { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; margin-bottom:28px; flex-wrap:wrap; }
+.lc-title { font-size:15px; font-weight:600; margin-bottom:3px; }
+.lc-sub { font-size:13px; color:var(--t3); }
+.lc-legend { display:flex; gap:16px; flex-shrink:0; }
+.lc-leg { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--t2); }
+.lc-dot { width:8px; height:8px; border-radius:50%; }
+
+/* ══════════════ CHARTS ROW ══════════════ */
+.charts-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.chart-box { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:28px; }
+.ch-title { font-size:14px; font-weight:600; margin-bottom:3px; }
+.ch-sub { font-size:12.5px; color:var(--t3); margin-bottom:22px; }
+
+/* Bars */
+.bars { display:flex; flex-direction:column; gap:10px; }
+.bar-r { display:flex; align-items:center; gap:10px; }
+.bar-lbl { font-size:12.5px; color:var(--t2); min-width:185px; flex-shrink:0; }
+.bar-track { flex:1; height:34px; background:var(--s2); border-radius:5px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:5px; display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:600; color:#fff; width:0; transition:width 1.3s cubic-bezier(.4,0,.2,1); }
+.bar-val { font-size:12.5px; font-weight:600; min-width:38px; text-align:right; }
+.g1 { background:linear-gradient(90deg,#1a5c36,#2d8a55); color:#fff; }
+.g2 { background:linear-gradient(90deg,#2d8a55,#52b788); }
+.b1 { background:linear-gradient(90deg,#1d3a5f,#457b9d); }
+.bar-val.gv { color:var(--green); }
+.bar-val.bv { color:var(--blue); }
+
+/* Donuts animated */
+.donuts-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.donut-item { text-align:center; }
+.donut-svg circle.donut-ring { transition:stroke-dasharray 1.4s cubic-bezier(.4,0,.2,1); }
+
+/* Efficiency metrics */
+.eff-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.eff-card { border:1px solid var(--border); border-radius:var(--r); padding:20px; background:var(--surface); }
+.eff-num { font-family:'Instrument Serif',serif; font-size:34px; font-weight:400; color:var(--blue); letter-spacing:-.02em; line-height:1; margin-bottom:5px; }
+.eff-lbl { font-size:12.5px; color:var(--t2); line-height:1.4; }
+.eff-note { font-size:11px; color:var(--t3); margin-top:3px; }
+
+/* Big metrics */
+.big-metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:20px; }
+.bm-card { border:1px solid var(--border); border-radius:var(--r); padding:22px 18px; background:var(--surface); }
+.bm-num { font-family:'Instrument Serif',serif; font-size:38px; font-weight:400; letter-spacing:-.025em; line-height:1; margin-bottom:6px; }
+.bm-lbl { font-size:12.5px; color:var(--t2); line-height:1.4; }
+.bm-note { font-size:11px; color:var(--t3); margin-top:3px; }
+
+/* Revenue visual v2 */
+.rev-block { background:var(--text); border-radius:14px; padding:40px; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; position:relative; overflow:hidden; }
+.rev-block::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px); background-size:22px 22px; }
+.rev-block > * { position:relative; }
+.rev-l {}
+.rev-tag { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.3); margin-bottom:14px; }
+.rev-from-num { font-family:'Instrument Serif',serif; font-size:26px; color:rgba(248,246,242,.35); letter-spacing:-.02em; }
+.rev-arrow-txt { font-size:16px; color:rgba(248,246,242,.18); margin:8px 0; }
+.rev-to-num { font-family:'Instrument Serif',serif; font-size:56px; color:#fff; letter-spacing:-.035em; line-height:1; }
+.rev-growth { display:inline-flex; align-items:center; gap:8px; margin-top:16px; background:var(--green2); color:#fff; font-size:16px; font-weight:600; padding:10px 20px; border-radius:8px; }
+.rev-r { display:flex; flex-direction:column; gap:16px; }
+.rev-stat { }
+.rev-sn { font-size:24px; font-weight:600; color:rgba(248,246,242,.85); }
+.rev-sl { font-size:12px; color:rgba(248,246,242,.35); margin-top:3px; }
+.rev-div { height:1px; background:rgba(255,255,255,.07); }
+
+/* ══ RESULT BAR ══ */
+.result-bar {
+  background: var(--gbg);
+  border-top: 3px solid var(--green);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.result-inner { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.result-icon {
+  width:40px; height:40px; border-radius:10px;
+  background:var(--green); display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.result-icon svg { width:18px; height:18px; stroke:#fff; fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+.result-text { font-size:15px; color:var(--green); font-weight:500; flex:1; }
+.result-sub { font-size:13.5px; color:var(--t2); margin-top:2px; }
+
+/* CTA */
+.cta-block { background:var(--text); border-radius:16px; padding:72px 64px; text-align:center; margin:64px 0; position:relative; overflow:hidden; }
+.cta-block::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px); background-size:24px 24px; }
+.cta-block > * { position:relative; }
+.cta-block h2 { font-family:'Instrument Serif',serif; font-size:clamp(26px,3.8vw,46px); font-weight:400; color:var(--bg); margin-bottom:12px; letter-spacing:-.02em; }
+.cta-block p { font-size:16px; color:rgba(248,246,242,.45); margin-bottom:36px; }
+.btn-row { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+.btn { display:inline-flex; align-items:center; gap:8px; font-family:inherit; font-size:14px; font-weight:500; padding:12px 24px; border-radius:8px; border:none; cursor:pointer; transition:opacity .15s,transform .15s; }
+.btn:hover { transform:translateY(-1px); opacity:.88; }
+.btn-light { background:var(--bg); color:var(--text); }
+.btn-ghost { background:rgba(255,255,255,.1); color:var(--bg); }
+
+footer { border-top:1px solid var(--border); padding:28px 0; }
+.fi { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.fc { font-size:13px; color:var(--t3); }
+.fl { display:flex; gap:24px; }
+.fl a { font-size:13px; color:var(--t3); transition:color .15s; }
+.fl a:hover { color:var(--text); }
+
+/* SECTION HEADERS */
+.sh { margin-bottom:40px; }
+.sk { font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--t3); margin-bottom:10px; }
+.st { font-family:'Instrument Serif',serif; font-size:30px; font-weight:400; letter-spacing:-.015em; }
+
+/* RESPONSIVE */
+@media(max-width:960px) {
+  .hero-g,.charts-row,.rev-block { grid-template-columns:1fr; }
+  .prob-grid { grid-template-columns:1fr 1fr; }
+  .big-metrics { grid-template-columns:1fr 1fr; }
+  .tl-item { grid-template-columns:46px 1fr; gap:16px; }
+  .insight { padding:36px 28px; }
+  .cta-block { padding:48px 28px; }
+  .hn-row { grid-template-columns:1fr 1fr 1fr; }
+}
+@media(max-width:640px) {
+  .wrap { padding:0 20px; }
+  .nav-i { padding:0 20px; }
+  .sec { padding:52px 0; }
+  .prob-grid { grid-template-columns:1fr; }
+  .big-metrics { grid-template-columns:1fr 1fr; }
+  .hn-row { grid-template-columns:1fr 1fr; }
+  .donuts-row { grid-template-columns:1fr 1fr; }
+  .eff-grid { grid-template-columns:1fr 1fr; }
+}
+
+/* hero entry */
+@keyframes up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+.crumb     { animation:up .5s .05s both; }
+.case-chip { animation:up .5s .10s both; }
+h1.htitle  { animation:up .6s .15s both; }
+.hlead     { animation:up .6s .25s both; }
+.hmeta     { animation:up .6s .32s both; }
+.hn-panel  { animation:up .6s .40s both; }
+
+
+/* RSK-specific additions */
+.market-chart-wrap { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:28px; }
+.mc-title { font-size:14px; font-weight:600; margin-bottom:3px; }
+.mc-sub { font-size:12.5px; color:var(--t3); margin-bottom:20px; }
+.channel-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px; }
+.ch-card2 { border:1px solid var(--border); border-radius:12px; padding:20px; background:var(--surface); display:flex; gap:14px; align-items:start; transition:box-shadow .2s; }
+.ch-card2:hover { box-shadow:0 3px 14px rgba(0,0,0,.06); }
+.ch2-ico { width:34px; height:34px; border-radius:8px; background:var(--gbg); border:1px solid rgba(26,92,54,.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ch2-ico svg { width:15px; height:15px; stroke:var(--green); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.ch2-title { font-size:13.5px; font-weight:600; margin-bottom:3px; }
+.ch2-desc { font-size:12.5px; color:var(--t2); line-height:1.5; }
+.sk { font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--t3); margin-bottom:10px; }
+.st { font-family:'Instrument Serif',serif; font-size:30px; font-weight:400; letter-spacing:-.015em; }
+
+@keyframes up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+.crumb   { animation:up .5s .05s both; }
+.case-chip { animation:up .5s .1s both; }
+h1.htitle { animation:up .6s .15s both; }
+.hlead    { animation:up .6s .25s both; }
+.hmeta    { animation:up .6s .32s both; }
+.hn-panel { animation:up .6s .4s both; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-i">
+    <a href="index.html" class="nav-back">Все кейсы</a>
+    <div class="nav-logo">Артём Ягелло</div>
+    <a href="https://t.me/artemcalypso" class="nav-cta">Обсудить ситуацию</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-z">
+      <div class="crumb">Кейс <span>· Производство металлоконструкций · B2B · 8 месяцев</span></div>
+      <div class="hero-g">
+        <div>
+          <div class="case-chip"><div class="chip-dot" style="background:var(--blue)"></div>Завод «РСК ШАЛЕ»</div>
+          <h1 class="htitle">Выход в новую отрасль<br>и прогнозируемая<br>загрузка производства<br><em>вместо хаоса</em></h1>
+          <p class="hlead">Завод зависел от стагнирующего рынка реставрации и работал от случайного заказа к случайному. Проанализировал рынок, пересобрал продуктовую линейку, выстроил четыре канала привлечения — выручка выросла на 21% за 8 месяцев.</p>
+          <div class="hmeta">
+            <div class="hm"><span class="hml">Отрасль</span><span class="hmv">Металлоконструкции, B2B</span></div>
+            <div class="hm"><span class="hml">Срок проекта</span><span class="hmv">8 месяцев</span></div>
+            <div class="hm"><span class="hml">Формат</span><span class="hmv">Стратегия + внедрение</span></div>
+          </div>
+        </div>
+        <div class="hn-panel">
+          <div class="hn-main">
+            <div class="hn-main-label">Ключевой результат · Рост выручки</div>
+            <div class="hn-main-from">нестабильная загрузка</div>
+            <div class="hn-main-arr">↓</div>
+            <div class="hn-main-to">+21%</div>
+            <div class="hn-badge">↑ Рост выручки за 8 месяцев</div>
+          </div>
+          <div class="hn-row">
+            <div class="hn-card">
+              <div class="hn-num">5</div>
+              <div class="hn-lbl">Целевых отраслей с постоянным спросом</div>
+            </div>
+            <div class="hn-card">
+              <div class="hn-num">4</div>
+              <div class="hn-lbl">Канала привлечения заказов</div>
+            </div>
+            <div class="hn-card">
+              <div class="hn-num blue">↓</div>
+              <div class="hn-lbl">Зависимость от крупных заказов</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRISIS BAR -->
+<div class="crisis-bar">
+  <div class="wrap">
+    <div class="crisis-inner">
+      <div class="crisis-icon">
+        <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <div>
+        <div class="crisis-text">Исходная проблема: завод работал в стагнирующей нише и жил от случайного заказа к случайному</div>
+        <div class="crisis-sub">Падение рынка реставрации · регулярные простои производства · отсутствие системы привлечения клиентов</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ПРОБЛЕМЫ -->
+<div class="sec">
+  <div class="wrap">
+    <div class="sk reveal" style="margin-bottom:10px">Диагноз</div>
+    <h2 class="st reveal" style="margin-bottom:32px">Три ограничения, которые блокировали рост</h2>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-n">01</div>
+        <div class="prob-title">Рынок реставрации стагнирует</div>
+        <div class="prob-desc">Объёмы работ в натуральном выражении падали с 2019 года — с 1 484 тыс. т до 909 тыс. т металлоконструкций за 9 мес. 2023. Работать в нише становилось всё сложнее даже при росте цен.</div>
+        <div class="prob-impact">−39% объёма рынка за 4 года — при росте стоимости из-за инфляции</div>
+      </div>
+      <div class="prob-card reveal d1">
+        <div class="prob-n">02</div>
+        <div class="prob-title">Нестабильная загрузка производства</div>
+        <div class="prob-desc">Зависимость от нескольких крупных заказов создавала регулярные простои. Производство то перегружено, то стоит. Планировать невозможно — выручка непредсказуема.</div>
+        <div class="prob-impact">Простои = постоянные расходы без выручки — прямые потери маржи</div>
+      </div>
+      <div class="prob-card reveal d2">
+        <div class="prob-n">03</div>
+        <div class="prob-title">Нет системного притока клиентов</div>
+        <div class="prob-desc">Клиенты приходили случайно — через знакомства или старые связи. Никакой воронки, никакого прогнозирования. Каждый новый контракт — лотерея, а не результат системы.</div>
+        <div class="prob-impact">Без системы невозможно планировать загрузку и инвестировать в рост</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INSIGHT -->
+<div class="sec" style="padding:60px 0">
+  <div class="wrap">
+    <div class="insight reveal">
+      <div class="insight-q">Рынок реставрации падает — но металлоконструкции нужны <em>везде.</em><br>Нужно было найти рынки с постоянным спросом <em>и туда зайти.</em></div>
+      <div class="insight-attr">Ключевой вывод после анализа рынка реконструкции и смежных отраслей</div>
+    </div>
+  </div>
+</div>
+
+<!-- АНАЛИЗ РЫНКА -->
+<div class="sec">
+  <div class="wrap">
+    <div class="sk reveal" style="margin-bottom:10px">Что показал анализ</div>
+    <h2 class="st reveal" style="margin-bottom:32px">Рынок реставрации падает — рядом есть растущие отрасли</h2>
+    <div class="charts-row">
+      <div class="chart-box reveal">
+        <div class="ch-title">Рынок реставрации · объём, тыс. т металлоконструкций</div>
+        <div class="ch-sub">Падение с 2019 года несмотря на рост цен</div>
+        <div class="bars">
+          <div class="bar-r"><div class="bar-lbl">2019 (пик)</div><div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#8b1a1a,#c44040)" data-w="100%">1 484</div></div><div class="bar-val" style="color:var(--red)">пик</div></div>
+          <div class="bar-r"><div class="bar-lbl">2020</div><div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#8b1a1a,#c44040)" data-w="94%">1 391</div></div><div class="bar-val" style="color:var(--red)">−6%</div></div>
+          <div class="bar-r"><div class="bar-lbl">2021</div><div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#8b1a1a,#c44040)" data-w="80%">1 195</div></div><div class="bar-val" style="color:var(--red)">−20%</div></div>
+          <div class="bar-r"><div class="bar-lbl">2022</div><div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#8b1a1a,#c44040)" data-w="74%">1 093</div></div><div class="bar-val" style="color:var(--red)">−26%</div></div>
+          <div class="bar-r"><div class="bar-lbl">9 мес. 2023</div><div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#92520c,#c47a2e)" data-w="61%">909</div></div><div class="bar-val" style="color:var(--amber)">−39%</div></div>
+        </div>
+      </div>
+      <div class="chart-box reveal d1">
+        <div class="ch-title">Целевые отрасли · приоритет по спросу</div>
+        <div class="ch-sub">5 сегментов с растущим спросом и низкой конкуренцией</div>
+        <div class="bars">
+          <div class="bar-r"><div class="bar-lbl">Жилищное строит.</div><div class="bar-track"><div class="bar-fill g1" data-w="92%">+28% объём</div></div><div class="bar-val gv">★★★</div></div>
+          <div class="bar-r"><div class="bar-lbl">Горнодобыча</div><div class="bar-track"><div class="bar-fill g1" data-w="100%">+63% инвест.</div></div><div class="bar-val gv">★★★</div></div>
+          <div class="bar-r"><div class="bar-lbl">Автодороги</div><div class="bar-track"><div class="bar-fill g2" data-w="72%">+17% объём</div></div><div class="bar-val gv">★★★</div></div>
+          <div class="bar-r"><div class="bar-lbl">Водные соор.</div><div class="bar-track"><div class="bar-fill b1" data-w="58%">госфинанс.</div></div><div class="bar-val bv">★★☆</div></div>
+          <div class="bar-r"><div class="bar-lbl">Стройучастки</div><div class="bar-track"><div class="bar-fill b1" data-w="48%">стабильно</div></div><div class="bar-val bv">★★☆</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ЧТО БЫЛО СДЕЛАНО -->
+<div class="sec">
+  <div class="wrap">
+    <div class="sk reveal" style="margin-bottom:10px">Что было сделано</div>
+    <h2 class="st reveal" style="margin-bottom:40px">Пять направлений работы за 8 месяцев</h2>
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-step">1</div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div class="tl-title">Анализ рынка реконструкции и смежных отраслей</div>
+            <div class="tl-period">Мес. 1–2</div>
+          </div>
+          <div class="tl-desc">Проанализировал объёмы работ, бюджеты крупных городов, потребности в металлоконструкциях и прогноз по каждой отрасли на 5 лет. Выявил 5 целевых сегментов — растущий спрос, отсутствие жёсткой конкуренции, совместимость с текущим оборудованием завода.</div>
+          <div class="tl-tags"><span class="tl-tag">PEST-анализ</span><span class="tl-tag">Прогноз рынка 5 лет</span><span class="tl-tag">Отраслевая приоритизация</span></div>
+          <div class="tl-result">5 целевых отраслей с обоснованием и прогнозом</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-step">2</div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div class="tl-title">Продуктово-канальная стратегия</div>
+            <div class="tl-period">Мес. 2</div>
+          </div>
+          <div class="tl-desc">Разработал стратегию снижения доли реставрации и выхода на рынок массовых изделий с постоянным спросом. Определил какие продукты производить, для каких сегментов и через какие каналы — с конкретными целевыми показателями по каждому направлению.</div>
+          <div class="tl-tags"><span class="tl-tag">Продуктовая стратегия</span><span class="tl-tag">Диверсификация</span><span class="tl-tag">Каналы продаж</span></div>
+          <div class="tl-result">Стратегия выхода с конкретными продуктами, каналами и KPI</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-step">3</div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div class="tl-title">Пересборка продуктовой линейки</div>
+            <div class="tl-period">Мес. 2–4</div>
+          </div>
+          <div class="tl-desc">Скорректировал ассортиментную матрицу под B2B-заказчиков в новых отраслях и массовые позиции с постоянным спросом. Убрал убыточные и нишевые позиции — сфокусировали производство на продуктах с высокой маржой и стабильным спросом.</div>
+          <div class="tl-tags"><span class="tl-tag">Ассортиментная матрица</span><span class="tl-tag">Маржинальность</span><span class="tl-tag">B2B-продукты</span></div>
+          <div class="tl-result">Обновлённая линейка: меньше позиций, выше маржа и спрос</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-step">4</div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div class="tl-title">Маркетинговая воронка и процессы продаж</div>
+            <div class="tl-period">Мес. 3–6</div>
+          </div>
+          <div class="tl-desc">Скорректировал сайт и запустил SEO под новые целевые запросы в приоритетных отраслях. Разработал регламенты продаж и скрипты под каждый тип B2B-клиента. Обучил менеджеров работе с новыми сегментами — другой профиль ЛПР, другие факторы выбора.</div>
+          <div class="tl-tags"><span class="tl-tag">Сайт + SEO</span><span class="tl-tag">Скрипты продаж</span><span class="tl-tag">Регламенты</span><span class="tl-tag">Обучение команды</span></div>
+          <div class="tl-result">Рабочая воронка с конверсиями по каждому сегменту</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-step">5</div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div class="tl-title">Прогнозируемая модель привлечения заказов</div>
+            <div class="tl-period">Мес. 4–8</div>
+          </div>
+          <div class="tl-desc">Выстроил четыре канала привлечения: тендеры, инвестиционные проекты, субподряд и прямые продажи. Каждый канал с понятным процессом, метриками и ответственными. Производство перешло из режима "случайный заказ" в режим "прогнозируемая загрузка".</div>
+          <div class="tl-tags"><span class="tl-tag">Тендеры</span><span class="tl-tag">Инвестпроекты</span><span class="tl-tag">Субподряд</span><span class="tl-tag">Прямые продажи</span></div>
+          <div class="tl-result">Прогнозируемая загрузка производства — простои перестали быть нормой</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- КАНАЛЫ -->
+    <div style="margin-top:32px">
+      <div class="sk reveal" style="margin-bottom:16px">Четыре канала вместо случайных связей</div>
+      <div class="channel-grid reveal">
+        <div class="ch-card2">
+          <div class="ch2-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></div>
+          <div>
+            <div class="ch2-title">Тендеры</div>
+            <div class="ch2-desc">Систематическая работа с гос. и коммерческими тендерами. Регламент мониторинга, критерии отбора, процесс подачи — без ручного управления.</div>
+          </div>
+        </div>
+        <div class="ch-card2">
+          <div class="ch2-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <div class="ch2-title">Инвестиционные проекты</div>
+            <div class="ch2-desc">Работа с девелоперами и инвесторами на стадии проектирования. Вход в проект до тендера — позиция доверенного поставщика.</div>
+          </div>
+        </div>
+        <div class="ch-card2">
+          <div class="ch2-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div>
+            <div class="ch2-title">Субподряд</div>
+            <div class="ch2-desc">Партнёрство с генподрядчиками в целевых отраслях. Стабильный поток заказов через доверенных партнёров без конкуренции за каждый лот.</div>
+          </div>
+        </div>
+        <div class="ch-card2">
+          <div class="ch2-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006.29 6.29l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="ch2-title">Прямые продажи</div>
+            <div class="ch2-desc">Активные продажи B2B-клиентам с постоянным спросом. CRM, скрипты, регламенты — системная работа с клиентской базой.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULT BAR -->
+<div class="result-bar">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="width:40px;height:40px;border-radius:10px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div>
+        <div style="font-size:15px;color:var(--green);font-weight:500">8 месяцев — новое направление запущено, загрузка стала прогнозируемой</div>
+        <div style="font-size:13.5px;color:var(--t2);margin-top:2px">+21% выручка · снижение зависимости от крупных заказов · 4 работающих канала привлечения</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- РЕЗУЛЬТАТЫ -->
+<div class="sec">
+  <div class="wrap">
+    <div class="sk reveal" style="margin-bottom:10px">Результаты</div>
+    <h2 class="st reveal" style="margin-bottom:32px">Что изменилось за 8 месяцев</h2>
+
+    <div class="rev-block reveal">
+      <div class="rev-l">
+        <div class="rev-tag">Ключевой показатель · Рост выручки</div>
+        <div class="rev-from-num">нестабильные заказы</div>
+        <div class="rev-arrow-txt">↓</div>
+        <div class="rev-to-num">+21%</div>
+        <div class="rev-growth">↑ За 8 месяцев работы</div>
+      </div>
+      <div class="rev-r">
+        <div class="rev-stat">
+          <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">5 отраслей</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Новых целевых рынков вместо одного стагнирующего</div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,.07)"></div>
+        <div class="rev-stat">
+          <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">4 канала</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Системных источника заказов вместо случайных связей</div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,.07)"></div>
+        <div class="rev-stat">
+          <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">Загрузка ↑</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Производство перешло из режима простоев в режим плана</div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,.07)"></div>
+        <div class="rev-stat">
+          <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">Система</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Маркетингово-сбытовая система поддерживает рост без ручного управления</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-metrics reveal">
+      <div class="bm-card">
+        <div class="bm-num" style="color:var(--green)">+21%</div>
+        <div class="bm-lbl">Рост выручки за 8 месяцев</div>
+        <div class="bm-note">За счёт новых продуктов и каналов</div>
+      </div>
+      <div class="bm-card">
+        <div class="bm-num" style="color:var(--green)">↑ B2B</div>
+        <div class="bm-lbl">Рост числа B2B-клиентов</div>
+        <div class="bm-note">С постоянным спросом на металлоконструкции</div>
+      </div>
+      <div class="bm-card">
+        <div class="bm-num" style="color:var(--blue)">↓ Риск</div>
+        <div class="bm-lbl">Снижение зависимости от крупных заказов</div>
+        <div class="bm-note">Диверсификация клиентской базы</div>
+      </div>
+      <div class="bm-card">
+        <div class="bm-num" style="color:var(--green)">Система</div>
+        <div class="bm-lbl">Маркетингово-сбытовая инфраструктура</div>
+        <div class="bm-note">Работает без участия собственника</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="wrap">
+  <div style="background:var(--text);border-radius:16px;padding:72px 64px;text-align:center;margin:64px 0;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px"></div>
+    <div style="position:relative">
+      <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(26px,3.8vw,46px);font-weight:400;color:var(--bg);margin-bottom:12px;letter-spacing:-.02em" class="reveal">Бизнес зависит от нескольких заказчиков?</h2>
+      <p style="font-size:16px;color:rgba(248,246,242,.45);margin-bottom:36px" class="reveal">Разберём как диверсифицировать клиентскую базу и выстроить системный приток заказов</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap" class="reveal">
+        <a href="https://t.me/artemcalypso" style="background:var(--bg);color:var(--text);display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s">Обсудить ситуацию →</a>
+        <a href="index.html" style="background:rgba(255,255,255,.1);color:var(--bg);display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s">← Все кейсы</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div style="font-size:13px;color:var(--t3)">© 2026 Артём Ягелло · jagiello.ru</div>
+      <div style="display:flex;gap:24px">
+        <a href="https://t.me/nofluff_strategy" style="font-size:13px;color:var(--t3)">Telegram-канал</a>
+        <a href="https://t.me/artemcalypso" style="font-size:13px;color:var(--t3)">Написать</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');ro.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+
+// Bars animation
+var barsDone=false;
+var barsEl=document.querySelector('.charts-row');
+if(barsEl){
+  var bo=new IntersectionObserver(function(e){
+    if(e[0].isIntersecting&&!barsDone){
+      barsDone=true;
+      document.querySelectorAll('.bar-fill').forEach(function(f,i){
+        setTimeout(function(){f.style.width=f.getAttribute('data-w')},i*120);
+      });
+    }
+  },{threshold:.2});
+  bo.observe(barsEl);
+}
+</script>
+</body>
+</html>
