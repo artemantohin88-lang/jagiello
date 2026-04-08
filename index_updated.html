@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Артём Ягелло — Внешний директор по росту для среднего бизнеса</title>
+<meta name="description" content="Помогаю собственникам найти следующий источник роста и довести его до денег. Работаю с компаниями от 200 млн ₽ выручки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #f8f6f2;
+  --surface:   #ffffff;
+  --surface-2: #f2efe9;
+  --border:    #e6e1d9;
+  --border-2:  #cdc6bb;
+  --text:      #18160f;
+  --text-2:    #68635a;
+  --text-3:    #a8a29a;
+  --green:     #1a5c36;
+  --green-bg:  #eaf2ed;
+  --amber:     #92520c;
+  --amber-bg:  #fdf3e7;
+  --radius:    10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(248,246,242,0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0 32px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  display: flex; align-items: baseline; gap: 5px;
+  font-size: 15px; font-weight: 600; letter-spacing: -0.01em;
+}
+.logo-serif {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400; font-size: 16px;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 2px; list-style: none;
+}
+.nav-links a {
+  font-size: 13.5px; color: var(--text-2);
+  padding: 6px 12px; border-radius: 7px;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-links a:hover { background: var(--surface-2); color: var(--text); }
+.nav-btn {
+  background: var(--text) !important; color: var(--bg) !important;
+  font-weight: 500 !important; border-radius: 7px !important;
+  padding: 8px 18px !important; font-size: 13.5px !important;
+  transition: opacity 0.15s !important;
+}
+.nav-btn:hover { opacity: 0.8 !important; }
+
+/* ─── LAYOUT ─── */
+.container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+.section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+.section-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 40px;
+}
+.section-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 30px; font-weight: 400; letter-spacing: -0.015em;
+}
+.section-sub {
+  font-size: 13px; color: var(--text-3);
+  display: flex; align-items: center; gap: 4px; cursor: pointer;
+  transition: color 0.15s;
+}
+.section-sub:hover { color: var(--text); }
+.section-sub::after { content: '→'; }
+
+/* ─── BUTTONS ─── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: inherit; font-size: 14px; font-weight: 500;
+  padding: 11px 24px; border-radius: 8px; border: none;
+  cursor: pointer; transition: opacity 0.15s, background 0.15s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark  { background: var(--text); color: var(--bg); }
+.btn-dark:hover { opacity: 0.83; }
+.btn-ghost { background: transparent; color: var(--text); border: 1.5px solid var(--border-2) !important; }
+.btn-ghost:hover { background: var(--surface-2); }
+.btn-light { background: var(--bg); color: var(--text); }
+.btn-light:hover { opacity: 0.88; }
+
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+.hero {
+  border-bottom: 1px solid var(--border);
+  padding: 80px 0 72px;
+  position: relative; overflow: hidden;
+}
+
+/* Dot grid background */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, #c8c0b4 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+/* Fade out grid at the bottom */
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 180px;
+  background: linear-gradient(transparent, var(--bg));
+  pointer-events: none;
+}
+
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-2);
+  margin-bottom: 32px;
+  position: relative; z-index: 1;
+}
+.hero-kicker-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--text-3);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 72px; align-items: start;
+  position: relative; z-index: 1;
+}
+
+h1.hero-headline {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 400; line-height: 1.06;
+  letter-spacing: -0.025em; color: var(--text);
+  margin-bottom: 26px;
+}
+h1.hero-headline em { font-style: italic; color: var(--text-2); }
+
+.hero-sub {
+  font-size: 17px; line-height: 1.68; color: var(--text-2);
+  font-weight: 400; max-width: 500px; margin-bottom: 36px;
+}
+
+.hero-cta-row {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.hero-trust {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--text-3);
+}
+.hero-trust-line { width: 24px; height: 1px; background: var(--border-2); }
+
+/* PAIN PANEL */
+.hero-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+.panel-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 20px;
+}
+.pain-item {
+  display: flex; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.pain-item:last-child { border-bottom: none; padding-bottom: 0; }
+.pain-item:first-child { padding-top: 0; }
+.pain-n {
+  font-family: 'Instrument Serif', serif;
+  font-size: 18px; font-style: italic; color: var(--text-3);
+  min-width: 20px; line-height: 1.5;
+}
+.pain-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.pain-desc  { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+/* Panel footer — differentiation */
+.panel-diff {
+  margin-top: 20px; padding: 16px;
+  background: var(--surface-2); border-radius: 8px;
+  font-size: 13px; color: var(--text-2); line-height: 1.55;
+}
+.panel-diff strong { color: var(--text); font-weight: 600; }
+
+/* ════════════════════════════
+   STATS BAR
+════════════════════════════ */
+.stats-bar { border-bottom: 1px solid var(--border); }
+.stats-inner {
+  display: flex; align-items: stretch; gap: 0;
+}
+.stat-item {
+  flex: 1; padding: 28px 40px;
+  border-right: 1px solid var(--border);
+}
+.stat-item:first-child { padding-left: 0; }
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 36px; font-weight: 400; color: var(--text);
+  letter-spacing: -0.025em; line-height: 1; margin-bottom: 5px;
+}
+.stat-label { font-size: 12.5px; color: var(--text-3); font-weight: 400; }
+
+/* ════════════════════════════
+   HOW IT WORKS
+════════════════════════════ */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+}
+.how-step {
+  padding: 32px 28px;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  transition: background 0.2s;
+}
+.how-step:last-child { border-right: none; }
+.how-step:hover { background: var(--surface-2); }
+.how-step-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 13px; font-style: italic; color: var(--text-3);
+  margin-bottom: 20px; display: block;
+}
+.how-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--surface-2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.how-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.how-desc  { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.how-result {
+  margin-top: 16px; padding: 12px 14px;
+  background: var(--green-bg); border-radius: 7px;
+  font-size: 12.5px; color: var(--green); font-weight: 500;
+}
+
+/* ════════════════════════════
+   CASES
+════════════════════════════ */
+.featured-case {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; background: var(--surface);
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+.featured-case:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.07); }
+
+.case-visual {
+  background: #18160f;
+  padding: 44px 40px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  min-height: 280px; position: relative; overflow: hidden;
+}
+/* Subtle grid inside dark panel */
+.case-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.case-co {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.32); font-weight: 500;
+  position: relative;
+}
+.case-visual-body { position: relative; }
+.case-big-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 80px; font-weight: 400; color: #fff;
+  line-height: 1; letter-spacing: -0.03em;
+}
+.case-big-label {
+  font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 6px;
+}
+.case-secondary-metrics {
+  display: flex; gap: 20px; margin-top: 24px; position: relative;
+}
+.csm { }
+.csm-num { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.75); }
+.csm-label { font-size: 11px; color: rgba(255,255,255,0.32); margin-top: 2px; }
+
+.case-content {
+  padding: 36px 36px 36px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.case-tag {
+  display: inline-block; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-2); background: var(--surface-2);
+  padding: 4px 10px; border-radius: 4px; margin-bottom: 16px;
+}
+.case-title {
+  font-family: 'Instrument Serif', serif; font-size: 22px; font-weight: 400;
+  line-height: 1.3; color: var(--text); margin-bottom: 12px; letter-spacing: -0.01em;
+}
+.case-desc { font-size: 14px; color: var(--text-2); line-height: 1.65; flex: 1; margin-bottom: 24px; }
+.case-metrics { display: flex; gap: 24px; }
+.cm-num   { font-size: 19px; font-weight: 700; color: var(--green); letter-spacing: -0.01em; }
+.cm-label { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+
+/* Case Grid */
+.cases-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.case-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s; cursor: pointer;
+}
+.case-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-color: var(--border-2); }
+.card-header {
+  padding: 24px 22px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-industry {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.card-kpi-badge {
+  font-size: 16px; font-weight: 700; color: var(--green);
+  letter-spacing: -0.01em;
+}
+.card-body { padding: 14px 22px 22px; }
+.card-title {
+  font-family: 'Instrument Serif', serif; font-size: 17px; font-weight: 400;
+  line-height: 1.35; color: var(--text); margin-bottom: 10px;
+}
+.card-result { font-size: 13px; color: var(--text-2); line-height: 1.55; margin-bottom: 16px; }
+.card-divider { height: 1px; background: var(--border); margin-bottom: 14px; }
+.card-meta { font-size: 12px; color: var(--text-3); }
+
+/* ════════════════════════════
+   FORMATS
+════════════════════════════ */
+.formats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.format-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 28px; background: var(--surface);
+  transition: box-shadow 0.2s; position: relative;
+  display: flex; flex-direction: column;
+}
+.format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.format-card.featured {
+  border-color: var(--text); border-width: 1.5px;
+  background: var(--text);
+}
+.format-card.featured .format-num,
+.format-card.featured .format-title,
+.format-card.featured .format-duration,
+.format-card.featured .format-desc { color: rgba(248,246,242,0.85); }
+.format-card.featured .format-title { color: var(--bg); }
+.format-card.featured .format-badge { background: rgba(255,255,255,0.12); color: rgba(248,246,242,0.7); }
+.format-card.featured .format-price { background: var(--bg); color: var(--text); }
+
+.format-badge-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.format-num { font-family: 'Instrument Serif', serif; font-size: 14px; font-style: italic; color: var(--text-3); }
+.format-badge {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--amber-bg); color: var(--amber);
+  padding: 3px 8px; border-radius: 4px;
+}
+.format-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.format-duration { font-size: 12px; color: var(--text-3); margin-bottom: 16px; }
+.format-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; flex: 1; }
+.format-list {
+  margin: 16px 0; list-style: none; display: flex; flex-direction: column; gap: 8px;
+}
+.format-list li {
+  font-size: 13px; color: var(--text-2);
+  display: flex; gap: 8px; align-items: baseline;
+}
+.format-list li::before { content: '—'; color: var(--text-3); flex-shrink: 0; }
+.format-card.featured .format-list li,
+.format-card.featured .format-list li::before { color: rgba(248,246,242,0.6); }
+.format-price {
+  display: inline-block; margin-top: 20px;
+  font-size: 13px; font-weight: 600; color: var(--text);
+  padding: 9px 18px; background: var(--surface-2);
+  border-radius: 7px; width: 100%; text-align: center;
+}
+
+/* ════════════════════════════
+   DIFFERENTIATION
+════════════════════════════ */
+.diff-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.diff-card {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px; background: var(--surface);
+}
+.diff-card-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 14px;
+}
+.diff-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.diff-row:last-child { margin-bottom: 0; }
+.diff-icon { font-size: 13px; flex-shrink: 0; width: 20px; }
+.diff-text { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+.diff-text strong { color: var(--text); font-weight: 600; }
+
+/* ════════════════════════════
+   TG TEASER
+════════════════════════════ */
+.tg-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.tg-post {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; background: var(--surface);
+  transition: border-color 0.2s, box-shadow 0.2s; cursor: pointer;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.tg-post:hover { border-color: var(--border-2); box-shadow: 0 3px 14px rgba(0,0,0,0.05); }
+.tg-tag {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.tg-post-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+.tg-post-more {
+  font-size: 13px; color: var(--text-3); margin-top: auto;
+  display: flex; align-items: center; gap: 4px;
+}
+.tg-post-more::after { content: '→'; }
+
+.tg-subscribe {
+  margin-top: 20px; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px 28px; background: var(--surface);
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+}
+.tg-sub-left {}
+.tg-sub-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.tg-sub-desc  { font-size: 13.5px; color: var(--text-2); }
+
+/* ════════════════════════════
+   FAQ
+════════════════════════════ */
+.faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--border); background: var(--surface); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  padding: 20px 24px; font-size: 15px; font-weight: 500; color: var(--text);
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  user-select: none; transition: background 0.15s;
+}
+.faq-q:hover { background: var(--surface-2); }
+.faq-arrow { color: var(--text-3); font-size: 18px; transition: transform 0.25s; flex-shrink: 0; }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 14px; color: var(--text-2); line-height: 1.65;
+  padding: 0 24px;
+}
+.faq-item.open .faq-a  { max-height: 300px; padding: 0 24px 20px; }
+.faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+/* ════════════════════════════
+   ABOUT
+════════════════════════════ */
+.about-grid { display: grid; grid-template-columns: 1fr 340px; gap: 72px; align-items: start; }
+.about-text h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 38px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 20px;
+}
+.about-body { font-size: 16px; line-height: 1.72; color: var(--text-2); margin-bottom: 16px; }
+.about-sidebar { display: flex; flex-direction: column; gap: 10px; }
+.sidebar-item {
+  border: 1px solid var(--border); border-radius: 9px;
+  padding: 15px 18px; background: var(--surface);
+  display: flex; align-items: center; gap: 14px;
+}
+.sidebar-ico {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: var(--surface-2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sidebar-ico svg { width: 16px; height: 16px; stroke: var(--text-2); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.sidebar-label { font-size: 11.5px; color: var(--text-3); font-weight: 400; }
+.sidebar-val   { font-size: 14px; font-weight: 500; color: var(--text); }
+
+/* ════════════════════════════
+   CTA BLOCK
+════════════════════════════ */
+.cta-block {
+  background: var(--text); border-radius: 16px;
+  padding: 72px 64px; text-align: center; margin: 64px 0;
+  position: relative; overflow: hidden;
+}
+.cta-block::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.cta-block > * { position: relative; }
+.cta-block h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(28px, 4vw, 50px); font-weight: 400;
+  color: var(--bg); margin-bottom: 14px; letter-spacing: -0.02em;
+}
+.cta-block p { font-size: 16px; color: rgba(248,246,242,0.5); margin-bottom: 36px; max-width: 460px; margin-left: auto; margin-right: auto; }
+.cta-row { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.btn-subtle { background: rgba(255,255,255,0.1); color: var(--bg); }
+.btn-subtle:hover { background: rgba(255,255,255,0.16); }
+
+/* ════════════════════════════
+   FOOTER
+════════════════════════════ */
+footer { border-top: 1px solid var(--border); padding: 32px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-copy { font-size: 13px; color: var(--text-3); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--text-3); transition: color 0.15s; }
+.footer-links a:hover { color: var(--text); }
+
+/* ════════════════════════════
+   RESPONSIVE
+════════════════════════════ */
+@media (max-width: 960px) {
+  .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .featured-case { grid-template-columns: 1fr; }
+  .case-visual { min-height: 200px; }
+  .how-grid, .cases-grid, .formats-grid, .tg-grid { grid-template-columns: 1fr 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .stat-item { padding: 20px 24px; }
+  .cta-block { padding: 48px 32px; }
+}
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .nav-inner { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 52px 0 44px; }
+  .section { padding: 52px 0; }
+  .how-grid, .cases-grid, .formats-grid, .tg-grid { grid-template-columns: 1fr; }
+  .stats-inner { flex-wrap: wrap; }
+  .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .cta-block { padding: 40px 20px; }
+}
+
+/* ── hero entry animations ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
+.hero-kicker   { animation: fadeUp 0.6s 0.05s both; }
+h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
+.hero-sub      { animation: fadeUp 0.65s 0.25s both; }
+.hero-cta-row  { animation: fadeUp 0.65s 0.35s both; }
+.hero-trust    { animation: fadeUp 0.65s 0.42s both; }
+.hero-panel    { animation: fadeUp 0.65s 0.48s both; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Артём <span class="logo-serif">Ягелло</span></div>
+    <ul class="nav-links">
+      <li><a href="#how">Как работаю</a></li>
+      <li><a href="#cases">Кейсы</a></li>
+      <li><a href="#formats">Форматы</a></li>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="https://t.me/artemcalypso" class="nav-btn">Обсудить ситуацию</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-kicker">
+      <div class="hero-kicker-dot"></div> · 
+      Внешний директор по росту · B2B · B2C · Средний бизнес
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-headline">
+          Нахожу следующий<br>источник роста —<br>и довожу<br><em>до денег</em>
+        </h1>
+        <p class="hero-sub">
+          Работаю с собственниками компаний с выручкой от 200 млн ₽.
+          Нахожу где система теряет деньги — и исправляю это руками: строю команды, настраиваю CRM, внедряю процессы, запускаю аналитику.
+          Стратегия не остаётся на бумаге.
+        </p>
+        <div class="hero-cta-row">
+          <a href="https://t.me/artemcalypso" class="btn btn-dark">Обсудить ситуацию →</a>
+          <a href="#cases" class="btn btn-ghost">Смотреть кейсы</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-line"></div>
+          Клиенты приходят по рекомендации
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-label">С чем обычно приходят</div>
+        <div>
+          <div class="pain-item">
+            <div class="pain-n">1</div>
+            <div>
+              <div class="pain-title">Рост замедлился</div>
+              <div class="pain-desc">Много действий, но эффект не соразмерен усилиям — непонятно, в чём упираетесь</div>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="pain-n">2</div>
+            <div>
+              <div class="pain-title">Нет управленческой ясности</div>
+              <div class="pain-desc">Данных много, но что именно влияет на прибыль — понять сложно</div>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="pain-n">3</div>
+            <div>
+              <div class="pain-title">Стратегия не работает</div>
+              <div class="pain-desc">Решения приняты, но внедрение буксует без партнёра внутри</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-diff">
+          <strong>Чем отличаюсь:</strong> участвую во внедрении лично. Не исчезаю после презентации — вхожу в операционку, работаю с командой и довожу до финансового результата.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Проектов завершено</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">7 лет</div>
+        <div class="stat-label">Стратегический консалтинг</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">до +32%</div>
+        <div class="stat-label">Рост выручки в кейсах</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Клиенты по рекомендации</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- ── HANDS-ON ── -->
+<div style="border-bottom:1px solid var(--border);padding:48px 0;background:var(--surface-2)">
+  <div class="container">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px">
+      <div style="font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;letter-spacing:-.01em">Что делаю руками — не только думаю</div>
+      <div style="font-size:13px;color:var(--text-3)">В каждом проекте участвую лично, от диагноза до результата</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">Оргструктура и команда</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Строю отделы продаж и маркетинга с нуля — нанимаю, онбожу, пишу скрипты и регламенты</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">Аналитика и CRM</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Лично настраиваю CRM, сквозные дашборды, планирование и KPI — навожу порядок в данных</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">Коммерческая система</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Разрабатываю и внедряю коммерческую политику, ценообразование, воронки и каналы</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">Контроль и подрядчики</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Оцениваю качество работы подрядчиков, останавливаю убыточные проекты, перераспределяю ресурсы</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- ── HOW IT WORKS ── -->
+<div class="section" id="how">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Как это работает</h2>
+    </div>
+    <div class="how-grid reveal">
+      <div class="how-step">
+        <span class="how-step-num">шаг 01</span>
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div class="how-title">Оценка ситуации</div>
+        <div class="how-desc">Разбираем, за счёт чего бизнес зарабатывает на самом деле. Отделяем факты от ощущений. Выявляем точки потерь денег и внимания.</div>
+        <div class="how-result">→ Чёткая картина: где прибыль, где потери</div>
+      </div>
+      <div class="how-step">
+        <span class="how-step-num">шаг 02</span>
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 20l-5.4-5.4a2 2 0 010-2.8l9-9a2 2 0 012.8 0L21 8.4a2 2 0 010 2.8L12 20"/><path d="M6 11l7 7"/></svg>
+        </div>
+        <div class="how-title">Выбор решений</div>
+        <div class="how-desc">Формируем ограниченное число сценариев. Считаем последствия каждого в деньгах и рисках. Принимаем управленческие решения, а не гипотезы.</div>
+        <div class="how-result">→ Конкретный список: что делать, куда инвестировать</div>
+      </div>
+      <div class="how-step">
+        <span class="how-step-num">шаг 03</span>
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="how-title">Внедрение и результат</div>
+        <div class="how-desc">Участвую в реализации — проверяю эффект в реальности, корректирую курс. Собственник не остаётся один на этапе изменений.</div>
+        <div class="how-result">→ Деньги, а не презентация в шкафу</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CASES ── -->
+<div class="section" id="cases">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Кейсы</h2>
+      <span class="section-sub">Все проекты</span>
+    </div>
+
+    <div class="featured-case reveal" onclick="window.location='polymer_case_v2_3.html'" style="cursor:pointer">
+      <div class="case-visual">
+        <div class="case-co">Компания «Полимер» · Производство</div>
+        <div class="case-visual-body">
+          <div class="case-big-num">+32%</div>
+          <div class="case-big-label">рост продаж за год</div>
+          <div class="case-secondary-metrics">
+            <div class="csm"><div class="csm-num">+4 п.п.</div><div class="csm-label">валовая прибыль</div></div>
+            <div class="csm"><div class="csm-num">−15%</div><div class="csm-label">CPA</div></div>
+            <div class="csm"><div class="csm-num">+22%</div><div class="csm-label">ROMI</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div>
+          <div class="case-tag">Системный маркетинг · 16 месяцев</div>
+          <h3 class="case-title">Запуск системного маркетинга и рост продаж</h3>
+          <p class="case-desc">Рост был несистемным, один клиент занимал 30% выручки. Провёл полную сегментацию базы, сформировал отдел продаж из 5+ менеджеров, внедрил CRM и сквозные дашборды, скорректировал ценообразование, запустил новые каналы по регионам.</p>
+        </div>
+        <div class="case-metrics">
+          <div><div class="cm-num">+32%</div><div class="cm-label">рост продаж</div></div>
+          <div><div class="cm-num">×2</div><div class="cm-label">снижение доли 1 клиента</div></div>
+          <div><div class="cm-num">+30%</div><div class="cm-label">продажи по регионам</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cases-grid">
+      <div class="case-card reveal" onclick="window.location='kitchen_case.html'" style="cursor:pointer">
+        <div class="card-header">
+          <div class="card-industry">Производство кухонь · 6 мес</div>
+          <div class="card-kpi-badge">+16%</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Стратегия работы с клиентскими кластерами</div>
+          <div class="card-result">Сегментация базы, ценностные предложения по сегментам, доработка CJM и процессов продаж</div>
+          <div class="card-divider"></div>
+          <div class="card-meta">«Кухонный двор» · конверсия в продажу</div>
+        </div>
+      </div>
+      <div class="case-card reveal reveal-delay-1">
+        <div class="card-header">
+          <div class="card-industry">Металлоконструкции · 8 мес</div>
+          <div class="card-kpi-badge">+21%</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Выход в новую отрасль и загрузка производства</div>
+          <div class="card-result">Анализ рынка, пересборка линейки, маркетинговая воронка, тендеры и субподряд</div>
+          <div class="card-divider"></div>
+          <div class="card-meta">РСК ШАЛЕ · рост выручки</div>
+        </div>
+      </div>
+      <div class="case-card reveal reveal-delay-2">
+        <div class="card-header">
+          <div class="card-industry">Автосервис · 7 мес</div>
+          <div class="card-kpi-badge">+14%</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Оптимизация экономики и повышение LTV клиентов</div>
+          <div class="card-result">Путь клиента, техника продаж, программа лояльности, CRM-воронка</div>
+          <div class="card-divider"></div>
+          <div class="card-meta">«У Виталия» · рост выручки</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FORMATS ── -->
+<div class="section" id="formats">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Форматы работы</h2>
+    </div>
+    <div class="formats-grid">
+      <div class="format-card reveal">
+        <div class="format-badge-row">
+          <div class="format-num">01</div>
+        </div>
+        <div class="format-title">Стратегическая диагностика</div>
+        <div class="format-duration">2–3 недели</div>
+        <ul class="format-list">
+          <li>Финансовый брейкдаун — где бизнес теряет деньги прямо сейчас</li>
+          <li>Оценка воронки, клиентской базы, позиционирования</li>
+          <li>Презентация с приоритетами + встреча с разбором 2 часа</li>
+        </ul>
+        <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
+          <span>100 000 ₽</span>
+          <a href="diagnostics_v2.html" style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</a>
+        </div>
+      </div>
+
+      <div class="format-card featured reveal reveal-delay-1">
+        <div class="format-badge-row">
+          <div class="format-num" style="color:rgba(248,246,242,0.4)">02</div>
+          <div class="format-badge">Глубокая проработка</div>
+        </div>
+        <div class="format-title" style="color:var(--bg)">Большая стратегия</div>
+        <div class="format-duration">6–8 недель</div>
+        <ul class="format-list">
+          <li>9 направлений: рынок, клиенты, конкуренты, позиция, цена, процессы</li>
+          <li>Дорожная карта с приоритетами, сроками и деньгами</li>
+          <li>Скрипты, ТЗ на CRM, большая презентация + 2 встречи</li>
+        </ul>
+        <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
+          <span>от 800 000 ₽</span>
+          <a href="strategy_v3.html" style="font-size:12px;color:rgba(248,246,242,0.6);font-weight:500">Подробнее →</a>
+        </div>
+      </div>
+
+      <div class="format-card reveal reveal-delay-2">
+        <div class="format-badge-row">
+          <div class="format-num">03</div>
+        </div>
+        <div class="format-title">Партнёрство и внедрение</div>
+        <div class="format-duration">от 4 месяцев</div>
+        <ul class="format-list">
+          <li>Внешний директор по росту на постоянной основе</li>
+          <li>Налаживаю процессы, команду, аналитику и рекламу руками</li>
+          <li>Еженедельный ритм, дашборды, ежемесячный отчёт</li>
+        </ul>
+        <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
+          <span>от 250 000 ₽/мес</span>
+          <a href="partnership_v2.html" style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--text-2);margin-top:16px;text-align:center">Большинство клиентов начинают с диагностики — и продолжают работу дальше</p>
+  </div>
+</div>
+
+<!-- ── WHY ME ── -->
+<div class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Почему не обычный консультант</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <div class="diff-card-label">Типичный консультант</div>
+        <div class="diff-row"><div class="diff-icon">✗</div><div class="diff-text">Даёт рекомендации и уходит</div></div>
+        <div class="diff-row"><div class="diff-icon">✗</div><div class="diff-text">Продаёт большие команды и объём часов</div></div>
+        <div class="diff-row"><div class="diff-icon">✗</div><div class="diff-text">Не несёт ответственности за внедрение</div></div>
+        <div class="diff-row"><div class="diff-icon">✗</div><div class="diff-text">Стратегия остаётся на бумаге</div></div>
+      </div>
+      <div class="diff-card reveal reveal-delay-1">
+        <div class="diff-card-label">Как работаю я</div>
+        <div class="diff-row"><div class="diff-icon">→</div><div class="diff-text"><strong>Участвую во внедрении</strong> — не исчезаю после презентации</div></div>
+        <div class="diff-row"><div class="diff-icon">→</div><div class="diff-text"><strong>Работаю напрямую</strong> с собственником, без прослойки</div></div>
+        <div class="diff-row"><div class="diff-icon">→</div><div class="diff-text"><strong>Фокус на деньги</strong> — рост выручки, маржи или управляемости</div></div>
+        <div class="diff-row"><div class="diff-icon">→</div><div class="diff-text"><strong>Конкретные действия</strong> — строю отделы, настраиваю CRM, пишу регламенты, управляю подрядчиками</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TELEGRAM ── -->
+<div class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Канал «Стратегия без воды»</h2>
+      <a href="https://t.me/nofluff_strategy" class="section-sub">Подписаться</a>
+    </div>
+    <div class="tg-grid">
+      <div class="tg-post reveal" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+        <div class="tg-tag">Кейс</div>
+        <div class="tg-post-text">Клиент думал, что проблема в маркетинге. Оказалось — в ценообразовании. Как один разговор с отделом продаж изменил диагноз.</div>
+        <div class="tg-post-more">Читать в канале</div>
+      </div>
+      <div class="tg-post reveal reveal-delay-1" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+        <div class="tg-tag">Инструмент</div>
+        <div class="tg-post-text">Как за 2 часа понять, в каком сегменте бизнес зарабатывает, а в каком — занимает людей без результата.</div>
+        <div class="tg-post-more">Читать в канале</div>
+      </div>
+      <div class="tg-post reveal reveal-delay-2" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+        <div class="tg-tag">Наблюдение</div>
+        <div class="tg-post-text">Большинство проблем роста — это не рынок и не команда. Это ценностное предложение, которое перестало работать три года назад.</div>
+        <div class="tg-post-more">Читать в канале</div>
+      </div>
+    </div>
+    <div class="tg-subscribe reveal">
+      <div class="tg-sub-left">
+        <div class="tg-sub-title">Стратегия без воды</div>
+        <div class="tg-sub-desc">Разборы, инструменты и наблюдения о росте среднего бизнеса — без общих слов</div>
+      </div>
+      <a href="https://t.me/nofluff_strategy" class="btn btn-dark">Подписаться →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FAQ ── -->
+<div class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Частые вопросы</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Как понять, подходит ли мой бизнес для работы?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Работаю с собственниками компаний с выручкой от 200 млн ₽, где есть реальный запрос на рост и готовность к изменениям. Лучший способ понять — 30-минутный разговор: я честно скажу, вижу ли смысл работать вместе и что именно можно сделать.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Сколько времени занимает первый результат?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Зависит от формата. Стратегическая диагностика даёт управленческую ясность уже за 3–5 недель. Первые измеримые изменения в показателях — обычно через 2–4 месяца после начала внедрения. Быстрых чудес не обещаю, но и не растягиваю работу на годы.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Работаете ли вы удалённо или только очно?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Работаю в смешанном формате: большинство встреч онлайн, при необходимости — выезды к клиенту. Это не влияет на качество результата — важна система работы, а не физическое присутствие.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Как попасть на работу с вами?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Напишите в Telegram — коротко расскажите о бизнесе и задаче. Я отвечу в течение суток и предложу созвониться. Новые проекты беру ограниченно — хочу работать качественно, а не в режиме конвейера.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- —— ABOUT —— -->
+<div class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>Артём Ягелло</h2>
+        <p class="about-body">Внешний директор по росту. 7 лет помогаю собственникам среднего бизнеса находить узкие места в системе и превращать их в источники роста.</p>
+        <p class="about-body">Работал с производством, торговлей, услугами, e-commerce. Не специализируюсь на одной отрасли — специализируюсь на том, как бизнес зарабатывает деньги.</p>
+        <p class="about-body">Не продаю большие команды и толстые отчёты. Работаю напрямую с собственником — от диагноза до результата.</p>
+        <br>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <a href="https://t.me/artemcalypso" class="btn btn-dark" style="display:inline-flex">Написать в Telegram →</a>
+          <a href="about.html" style="font-size:14px;color:var(--text-2);display:inline-flex;align-items:center;gap:6px;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'">Подробнее обо мне →</a>
+        </div>
+      </div>
+      <div class="about-sidebar reveal reveal-delay-1">
+        <div class="sidebar-item">
+          <div class="sidebar-ico">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="sidebar-label">Работаю</div>
+            <div class="sidebar-val">Россия, онлайн</div>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-ico">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <div class="sidebar-label">Специализация</div>
+            <div class="sidebar-val">Рост выручки и маржи, B2B</div>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-ico">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div>
+            <div class="sidebar-label">Клиенты</div>
+            <div class="sidebar-val">Компании от 200 млн ₽ выручки</div>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-ico">
+            <svg viewBox="0 0 24 24"><path d="M21.5 2L12 22 9.5 13.5 2 11z"/></svg>
+          </div>
+          <div>
+            <div class="sidebar-label">Telegram-канал</div>
+            <div class="sidebar-val"><a href="https://t.me/nofluff_strategy" style="color:var(--text)">«Стратегия без воды»</a></div>
+          </div>
+        </div>
+        <div class="sidebar-item" style="background:var(--text);border-color:var(--text)">
+          <div class="sidebar-ico" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15)">
+            <svg viewBox="0 0 24 24" style="stroke:#fff"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="sidebar-label" style="color:rgba(248,246,242,.45)">Страница обо мне</div>
+            <div class="sidebar-val" style="color:var(--bg)"><a href="about.html" style="color:var(--bg)">Открыть →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<div class="container">
+  <div class="cta-block reveal">
+    <h2>Чувствуете, что бизнес работает не на пределе?</h2>
+    <p>Стоит разобраться, где именно теряются деньги — и что с этим делать</p>
+    <div class="cta-row">
+      <a href="https://t.me/artemcalypso" class="btn btn-light">Обсудить ситуацию →</a>
+      <a href="https://t.me/nofluff_strategy" class="btn btn-subtle">Подписаться на канал</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2026 Артём Ягелло · jagiello.ru</div>
+      <div class="footer-links">
+        <a href="https://t.me/nofluff_strategy">Telegram-канал</a>
+        <a href="https://t.me/artemcalypso">Написать</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// FAQ
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
