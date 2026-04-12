@@ -595,7 +595,9 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; }
   .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid var(--border); padding: 18px 0; }
   .cta-block { padding: 40px 20px; }
 }
-
+@media (max-width: 640px) {
+     .hands-grid { grid-template-columns: 1fr 1fr !important; }
+  }
 /* ── hero entry animations ── */
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
 .hero-kicker   { animation: fadeUp 0.6s 0.05s both; }
@@ -714,7 +716,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
       <div style="font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;letter-spacing:-.01em">Что делаю руками — не только думаю</div>
       <div style="font-size:13px;color:var(--text-3)">В каждом проекте участвую лично, от диагноза до результата</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px" class="hands-grid">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px">
         <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">Оргструктура и команда</div>
         <div style="font-size:13px;color:var(--text-2);line-height:1.55">Строю отделы продаж и маркетинга с нуля — нанимаю, обучаю, пишу скрипты и регламенты</div>
@@ -819,6 +821,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-result">Сегментация базы, ценностные предложения по сегментам, доработка CJM и процессов продаж</div>
           <div class="card-divider"></div>
           <div class="card-meta">«Кухонный двор» · конверсия в продажу</div>
+          <div style="margin-top:10px;font-size:13px;color:var(--green);font-weight:500">Подробнее →</div>
         </div>
       </div>
       <div class="case-card reveal reveal-delay-1" onclick="window.location='rsk_case_v2.html'" style="cursor:pointer">
@@ -826,13 +829,12 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-industry">Металлоконструкции · 8 мес</div>
           <div class="card-kpi-badge">+21%</div>
         </div>
-        <div style="margin-top:10px;font-size:13px;color:var(--green);font-weight:500">Подробнее →</div>
         <div class="card-body">
           <div class="card-title">Выход в новую отрасль и загрузка производства</div>
           <div class="card-result">Анализ рынка, пересборка линейки, маркетинговая воронка, тендеры и субподряд</div>
           <div class="card-divider"></div>
-          <div style="margin-top:10px;font-size:13px;color:var(--green);font-weight:500">Подробнее →</div>
           <div class="card-meta">РСК ШАЛЕ · рост выручки</div>
+          <div style="margin-top:10px;font-size:13px;color:var(--green);font-weight:500">Подробнее →</div>
         </div>
       </div>
       <div class="case-card reveal reveal-delay-2" onclick="window.location='phygital_case_v4.html'" style="cursor:pointer">
@@ -845,6 +847,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-result">Исследование аудитории, конкурентный анализ, бренд-платформа, traffic-map для сети центров</div>
           <div class="card-divider"></div>
           <div class="card-meta">«Игры будущего» · NDA · центров к 2030</div>
+          <div style="margin-top:10px;font-size:13px;color:var(--green);font-weight:500">Подробнее →</div>
         </div>
       </div>
     </div>
