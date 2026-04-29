@@ -993,55 +993,39 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
 </div>
 
 <!-- ── BLOG ── -->
-<div class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <h2 class="section-title">Блог</h2>
-      <a href="https://jagiello.ru/blog/" class="section-sub">Все статьи</a>
+<div style="background:#18160f;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:72px 0;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;"></div>
+  <div class="container" style="position:relative;">
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+      <h2 style="font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;letter-spacing:-.015em;color:#f8f6f2">Блог</h2>
+      <a href="https://jagiello.ru/blog/" style="font-size:13px;color:rgba(248,246,242,.4);display:flex;align-items:center;gap:4px;transition:color .15s" onmouseover="this.style.color='rgba(248,246,242,.8)'" onmouseout="this.style.color='rgba(248,246,242,.4)'">Все статьи →</a>
     </div>
 
-    <p style="font-size:16px;color:var(--text-2);line-height:1.7;max-width:580px;margin-bottom:40px">Пишу о том, как средний бизнес теряет деньги и как это исправить. Без воды — только разборы из практики, инструменты которые работают, и наблюдения которые неудобно игнорировать.</p>
+    <p style="font-size:15px;color:rgba(248,246,242,.45);line-height:1.7;max-width:520px;margin-bottom:36px">Разборы из практики, инструменты которые работают, и наблюдения которые неудобно игнорировать.</p>
 
-    <!-- Рубрики -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px" class="reveal">
-      <div style="border:1px solid var(--border);border-radius:10px;padding:20px 22px;background:var(--surface)">
-        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-bg);padding:3px 9px;border-radius:4px;display:inline-block;margin-bottom:12px">Стратегия</div>
-        <div style="font-size:14px;color:var(--text);font-weight:500;margin-bottom:6px">Как устроен рост</div>
-        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Жизненный цикл компании, маркетинговые стратегии, упущенная выгода — системный взгляд на бизнес</div>
-      </div>
-      <div style="border:1px solid var(--border);border-radius:10px;padding:20px 22px;background:var(--surface)">
-        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-bg);padding:3px 9px;border-radius:4px;display:inline-block;margin-bottom:12px">Инструмент</div>
-        <div style="font-size:14px;color:var(--text);font-weight:500;margin-bottom:6px">Что применять на практике</div>
-        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Конкретные методы, инструменты и подходы — от выбора маркетинговых каналов до проведения стратсессий</div>
-      </div>
-      <div style="border:1px solid var(--border);border-radius:10px;padding:20px 22px;background:var(--surface)">
-        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-bg);padding:3px 9px;border-radius:4px;display:inline-block;margin-bottom:12px">Наблюдение</div>
-        <div style="font-size:14px;color:var(--text);font-weight:500;margin-bottom:6px">Что замечаю в проектах</div>
-        <div style="font-size:13px;color:var(--text-2);line-height:1.55">Короткие инсайты из практики — паттерны которые повторяются у разных компаний и которые стоит знать</div>
-      </div>
-    </div>
-
-    <!-- Последние статьи -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px" class="reveal">
-      <a href="https://jagiello.ru/blog/posts/strategicheskaya-sessiya/" style="display:block;border:1px solid var(--border);border-radius:10px;padding:24px;background:var(--surface);transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.boxShadow='none';this.style.borderColor='var(--border)'">
-        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-bg);padding:3px 9px;border-radius:4px;display:inline-block;margin-bottom:14px">Инструмент</div>
-        <div style="font-family:'Instrument Serif',serif;font-size:18px;font-weight:400;color:var(--text);line-height:1.35;margin-bottom:10px">Стратегическая сессия: как провести эффективно и без ошибок</div>
-        <div style="font-size:13px;color:var(--text-2);line-height:1.55;margin-bottom:16px">Как провести стратсессию с реальным результатом — разбираю ошибки, роль ведущего и организацию.</div>
-        <div style="font-size:12px;color:var(--text-3)">30 апр 2026 · 11 мин</div>
+    <!-- Карточки статей -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px">
+      <a href="https://jagiello.ru/blog/posts/strategicheskaya-sessiya/" style="display:block;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px;transition:background .2s,border-color .2s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.14)'" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.08)'">
+        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#52b788;margin-bottom:14px">Инструмент</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:18px;font-weight:400;color:#f8f6f2;line-height:1.35;margin-bottom:10px">Стратегическая сессия: как провести эффективно и без ошибок</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.55;margin-bottom:16px">Как провести стратсессию с реальным результатом — разбираю ошибки, роль ведущего и организацию.</div>
+        <div style="font-size:12px;color:rgba(248,246,242,.25)">30 апр 2026 · 11 мин</div>
       </a>
-      <a href="https://jagiello.ru/blog/posts/zhiznennyj-cikl-organizacii/" style="display:block;border:1px solid var(--border);border-radius:10px;padding:24px;background:var(--surface);transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.boxShadow='none';this.style.borderColor='var(--border)'">
-        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-bg);padding:3px 9px;border-radius:4px;display:inline-block;margin-bottom:14px">Стратегия</div>
-        <div style="font-family:'Instrument Serif',serif;font-size:18px;font-weight:400;color:var(--text);line-height:1.35;margin-bottom:10px">Жизненный цикл организации: почему компания перестала расти</div>
-        <div style="font-size:13px;color:var(--text-2);line-height:1.55;margin-bottom:16px">Разбираю стадии жизненного цикла на практике — где компании теряют деньги и как это исправить.</div>
-        <div style="font-size:12px;color:var(--text-3)">29 апр 2026 · 10 мин</div>
+      <a href="https://jagiello.ru/blog/posts/zhiznennyj-cikl-organizacii/" style="display:block;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px;transition:background .2s,border-color .2s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.14)'" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.08)'">
+        <div style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#52b788;margin-bottom:14px">Стратегия</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:18px;font-weight:400;color:#f8f6f2;line-height:1.35;margin-bottom:10px">Жизненный цикл организации: почему компания перестала расти</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.55;margin-bottom:16px">Разбираю стадии жизненного цикла на практике — где компании теряют деньги и как это исправить.</div>
+        <div style="font-size:12px;color:rgba(248,246,242,.25)">29 апр 2026 · 10 мин</div>
       </a>
     </div>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap" class="reveal">
-      <a href="https://jagiello.ru/blog/" class="btn btn-dark">Все статьи →</a>
-      <a href="https://t.me/share/url?url=https://jagiello.ru/blog/&text=Блог Артёма Ягелло — разборы и инструменты о росте бизнеса" target="_blank" rel="noopener" class="btn btn-ghost">
+    <!-- Кнопки -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://jagiello.ru/blog/" class="btn btn-light">Все статьи →</a>
+      <a href="https://t.me/share/url?url=https://jagiello.ru/blog/&text=Блог Артёма Ягелло — разборы и инструменты о росте бизнеса" target="_blank" rel="noopener" class="btn btn-subtle">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
-        Поделиться блогом
+        Поделиться
       </a>
     </div>
 
