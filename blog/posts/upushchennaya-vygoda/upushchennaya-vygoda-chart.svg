@@ -1,0 +1,90 @@
+<svg width="100%" viewBox="0 0 680 360" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Упущенная выгода — разрыв между фактической и потенциальной прибылью</title>
+<defs>
+  <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#8b1a1a" stroke-width="1.5" stroke-opacity="0.25"/>
+  </pattern>
+</defs>
+
+<!-- Фон -->
+<rect width="680" height="360" fill="#f8f6f2" rx="12"/>
+
+<!-- ── ЛЕВАЯ ЧАСТЬ: бар-чарт ── -->
+
+<!-- Ось Y -->
+<line x1="60" y1="30" x2="60" y2="260" stroke="#e6e1d9" stroke-width="1"/>
+<!-- Ось X -->
+<line x1="60" y1="260" x2="400" y2="260" stroke="#e6e1d9" stroke-width="1"/>
+
+<!-- Отметки оси Y -->
+<line x1="56" y1="260" x2="60" y2="260" stroke="#e6e1d9" stroke-width="1"/>
+<line x1="56" y1="180" x2="60" y2="180" stroke="#e6e1d9" stroke-width="1"/>
+<line x1="56" y1="100" x2="60" y2="100" stroke="#e6e1d9" stroke-width="1"/>
+<text x="48" y="264" text-anchor="end" font-family="Instrument Sans, sans-serif" font-size="10" fill="#a8a29a">0</text>
+<text x="48" y="184" text-anchor="end" font-family="Instrument Sans, sans-serif" font-size="10" fill="#a8a29a">50%</text>
+<text x="48" y="104" text-anchor="end" font-family="Instrument Sans, sans-serif" font-size="10" fill="#a8a29a">100%</text>
+
+<!-- Горизонтальные сетки -->
+<line x1="60" y1="180" x2="400" y2="180" stroke="#e6e1d9" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="60" y1="100" x2="400" y2="100" stroke="#e6e1d9" stroke-width="1" stroke-dasharray="3 3"/>
+
+<!-- Колонка 1: Фактическая прибыль -->
+<rect x="90" y="100" width="100" height="160" fill="#18160f" rx="4"/>
+<text x="140" y="278" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Фактическая</text>
+<text x="140" y="291" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">прибыль</text>
+<text x="140" y="130" text-anchor="middle" font-family="Instrument Serif, serif" font-size="22" fill="#fff" font-weight="400">80%</text>
+
+<!-- Колонка 2: Потенциальная прибыль -->
+<rect x="230" y="100" width="100" height="160" fill="#1a5c36" rx="0"/>
+<rect x="230" y="100" width="100" height="4" fill="#1a5c36" rx="4"/>
+<rect x="230" y="256" width="100" height="4" fill="#1a5c36" rx="4"/>
+<!-- Верхняя часть = упущенная выгода (штриховка) -->
+<rect x="230" y="50" width="100" height="50" fill="url(#hatch)" rx="0"/>
+<rect x="230" y="50" width="100" height="4" fill="#8b1a1a" fill-opacity="0.4" rx="4"/>
+<!-- Рамка вокруг всей колонки -->
+<rect x="230" y="50" width="100" height="210" fill="none" stroke="#e6e1d9" stroke-width="1" rx="4"/>
+<text x="280" y="278" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Потенциальная</text>
+<text x="280" y="291" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">прибыль</text>
+<text x="280" y="130" text-anchor="middle" font-family="Instrument Serif, serif" font-size="22" fill="#fff" font-weight="400">80%</text>
+
+<!-- Подпись упущенной выгоды -->
+<text x="280" y="73" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9" font-weight="600" fill="#8b1a1a" letter-spacing=".06em">УПУЩЕННАЯ ВЫГОДА</text>
+
+<!-- Скобка упущенной выгоды -->
+<line x1="338" y1="50" x2="350" y2="50" stroke="#8b1a1a" stroke-width="1.5"/>
+<line x1="350" y1="50" x2="350" y2="100" stroke="#8b1a1a" stroke-width="1.5"/>
+<line x1="338" y1="100" x2="350" y2="100" stroke="#8b1a1a" stroke-width="1.5"/>
+<line x1="350" y1="75" x2="366" y2="75" stroke="#8b1a1a" stroke-width="1.5"/>
+<rect x="366" y="60" width="40" height="30" fill="#8b1a1a" fill-opacity="0.08" rx="4"/>
+<text x="386" y="73" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9" font-weight="600" fill="#8b1a1a">10–20%</text>
+<text x="386" y="84" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9" fill="#8b1a1a">потерь</text>
+
+<!-- ── ПРАВАЯ ЧАСТЬ: три источника потерь ── -->
+<line x1="420" y1="30" x2="420" y2="310" stroke="#e6e1d9" stroke-width="1"/>
+<text x="550" y="48" text-anchor="middle" font-family="Instrument Serif, serif" font-size="14" fill="#18160f">Три источника потерь</text>
+
+<!-- Источник 1 -->
+<rect x="436" y="62" width="228" height="72" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="62" width="3" height="72" rx="1" fill="#8b1a1a"/>
+<text x="454" y="82" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Нет владельца процесса</text>
+<text x="454" y="98" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Никто не отвечает за удержание</text>
+<text x="454" y="113" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">клиентов или ценообразование</text>
+
+<!-- Источник 2 -->
+<rect x="436" y="144" width="228" height="72" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="144" width="3" height="72" rx="1" fill="#8b1a1a"/>
+<text x="454" y="164" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Потери на стыках отделов</text>
+<text x="454" y="180" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Маркетинг → продажи → производство</text>
+<text x="454" y="195" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">— в каждом разрыве теряются деньги</text>
+
+<!-- Источник 3 -->
+<rect x="436" y="226" width="228" height="72" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="226" width="3" height="72" rx="1" fill="#8b1a1a"/>
+<text x="454" y="246" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Маскировка ростом</text>
+<text x="454" y="262" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">При росте 30–50% в год потери</text>
+<text x="454" y="277" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">незаметны за абсолютными цифрами</text>
+
+<!-- Нижняя подпись -->
+<text x="340" y="330" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#a8a29a">Упущенная выгода не в отчётах — её нужно считать отдельно</text>
+
+</svg>
