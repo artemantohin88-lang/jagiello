@@ -1,0 +1,89 @@
+<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Аудит продаж — воронка продаж и точка потери</title>
+<defs>
+  <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#8b1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Фон -->
+<rect width="680" height="380" fill="#f8f6f2" rx="12"/>
+
+<!-- ── ЗАГОЛОВОК ── -->
+<text x="190" y="34" text-anchor="middle" font-family="Instrument Serif, serif" font-size="14" fill="#18160f">Воронка продаж</text>
+<text x="560" y="34" text-anchor="middle" font-family="Instrument Serif, serif" font-size="14" fill="#18160f">Что вскрывает аудит</text>
+<line x1="420" y1="20" x2="420" y2="355" stroke="#e6e1d9" stroke-width="1"/>
+
+<!-- ══ ВОРОНКА ══ -->
+<!-- Уровень 1: 100 лидов — ширина 300px, x от 40 до 340 -->
+<rect x="40" y="52" width="300" height="56" fill="#18160f" rx="6"/>
+<text x="72" y="84" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="500" fill="rgba(255,255,255,.6)">Заявки</text>
+<text x="190" y="88" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" font-weight="400" fill="#ffffff">100</text>
+<text x="330" y="84" text-anchor="end" font-family="Instrument Sans, sans-serif" font-size="11" fill="rgba(255,255,255,.4)">лидов</text>
+
+<!-- Соединитель 1→2 -->
+<polygon points="40,108 340,108 316,126 64,126" fill="#e6e1d9"/>
+
+<!-- Уровень 2: 68 контактов — ширина 252px, x от 64 до 316 -->
+<rect x="64" y="126" width="252" height="56" fill="#2d8a55" rx="6"/>
+<text x="96" y="145" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,.7)">Первый контакт</text>
+<text x="96" y="170" font-family="Instrument Serif, serif" font-size="26" font-weight="400" fill="#ffffff">68</text>
+<text x="326" y="158" font-family="Instrument Sans, sans-serif" font-size="11" fill="#2d8a55" font-weight="600">−32%</text>
+
+<!-- Соединитель 2→3 -->
+<polygon points="64,182 316,182 286,200 94,200" fill="#e6e1d9"/>
+
+<!-- Уровень 3: 41 КП — ТОЧКА ПОТЕРИ — ширина 192px, x от 94 до 286 -->
+<rect x="94" y="200" width="192" height="56" fill="#fff" rx="6" stroke="#8b1a1a" stroke-width="1.5"/>
+<rect x="94" y="200" width="4" height="56" rx="2" fill="#8b1a1a"/>
+<text x="116" y="219" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Коммерч. предложение</text>
+<text x="116" y="244" font-family="Instrument Serif, serif" font-size="26" font-weight="400" fill="#8b1a1a">41</text>
+<text x="296" y="229" font-family="Instrument Sans, sans-serif" font-size="11" fill="#8b1a1a" font-weight="600">−40%</text>
+<!-- Указатель точки потери -->
+<line x1="296" y1="240" x2="370" y2="240" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#arr-red)"/>
+<rect x="372" y="228" width="40" height="24" rx="4" fill="#8b1a1a" fill-opacity="0.1"/>
+<text x="392" y="238" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9" font-weight="700" fill="#8b1a1a" letter-spacing=".06em">ПОТЕРЯ</text>
+<text x="392" y="248" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9" fill="#8b1a1a">здесь</text>
+
+<!-- Соединитель 3→4 -->
+<polygon points="94,256 286,256 262,274 118,274" fill="#e6e1d9"/>
+
+<!-- Уровень 4: 16 сделок — ширина 144px, x от 118 до 262 -->
+<rect x="118" y="274" width="144" height="56" fill="#f2efe9" rx="6" stroke="#e6e1d9" stroke-width="1"/>
+<text x="132" y="301" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="500" fill="#68635a">Сделка</text>
+<text x="190" y="317" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" font-weight="400" fill="#18160f">16</text>
+<!-- Метка снаружи справа -->
+<text x="272" y="305" font-family="Instrument Sans, sans-serif" font-size="11" fill="#a8a29a" font-weight="600">−61%</text>
+
+<!-- Итог -->
+<text x="190" y="356" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#a8a29a">Итоговая конверсия: <tspan font-weight="600" fill="#18160f">16%</tspan></text>
+
+<!-- ══ ПРАВАЯ ЧАСТЬ ══ -->
+
+<!-- Пункт 1 -->
+<rect x="436" y="52" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="52" width="3" height="66" rx="2" fill="#18160f"/>
+<text x="452" y="74" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Скрипты не работают</text>
+<text x="452" y="90" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Менеджеры зачитывают</text>
+<text x="452" y="106" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">характеристики, не продают</text>
+
+<!-- Пункт 2 -->
+<rect x="436" y="130" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="130" width="3" height="66" rx="2" fill="#8b1a1a"/>
+<text x="452" y="152" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Выручка на 2–3 людях</text>
+<text x="452" y="168" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Уйдут — унесут клиентов.</text>
+<text x="452" y="184" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">CRM не заполнена</text>
+
+<!-- Пункт 3 -->
+<rect x="436" y="208" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
+<rect x="436" y="208" width="3" height="66" rx="2" fill="#8b1a1a"/>
+<text x="452" y="230" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Скорость реакции</text>
+<text x="452" y="246" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Клиент ждёт часы —</text>
+<text x="452" y="262" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">конкурент уже ответил</text>
+
+<!-- Пункт 4 зелёный -->
+<rect x="436" y="286" width="220" height="44" rx="8" fill="#eaf2ed" stroke="#1a5c36" stroke-width="0.5"/>
+<text x="452" y="306" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#1a5c36">Аудит находит всё это</text>
+<text x="452" y="320" font-family="Instrument Sans, sans-serif" font-size="11" fill="#1a5c36" fill-opacity=".7">до дорогостоящих решений</text>
+
+</svg>
