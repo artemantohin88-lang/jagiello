@@ -1153,6 +1153,12 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+window.addEventListener('pageshow', e => {
+  if (e.persisted) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
+});
+
 // FAQ
 function toggleFaq(btn) {
   const item = btn.parentElement;
