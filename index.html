@@ -413,6 +413,7 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   padding: 28px; background: var(--surface);
   transition: box-shadow 0.2s; position: relative;
   display: flex; flex-direction: column;
+  color: inherit; text-decoration: none;
 }
 .format-card { cursor: pointer; } .format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); transition: box-shadow .2s, transform .2s; }
 .format-card.featured {
@@ -484,6 +485,7 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   padding: 22px; background: var(--surface);
   transition: border-color 0.2s, box-shadow 0.2s; cursor: pointer;
   display: flex; flex-direction: column; gap: 12px;
+  color: inherit; text-decoration: none;
 }
 .tg-post:hover { border-color: var(--border-2); box-shadow: 0 3px 14px rgba(0,0,0,0.05); }
 .tg-tag {
@@ -881,7 +883,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
       <h2 class="section-title">Форматы работы</h2>
     </div>
     <div class="formats-grid">
-      <div class="format-card reveal" onclick="window.location='diagnostics.html'">
+      <a href="diagnostics.html" class="format-card reveal">
         <div class="format-badge-row">
           <div class="format-num">01</div>
         </div>
@@ -894,11 +896,11 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
         </ul>
         <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
           <span>150 000 ₽</span>
-          <a href="diagnostics.html" style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</a>
+          <span style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="format-card featured reveal reveal-delay-1" onclick="window.location='strategy.html'">
+      <a href="strategy.html" class="format-card featured reveal reveal-delay-1">
         <div class="format-badge-row">
           <div class="format-num" style="color:rgba(248,246,242,0.4)">02</div>
           <div class="format-badge">Глубокая проработка</div>
@@ -912,11 +914,11 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
         </ul>
         <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
           <span>от 900 000 ₽</span>
-          <a href="strategy.html" style="font-size:12px;color:#1a5c36;font-weight:500">Подробнее →</a>
+          <span style="font-size:12px;color:#1a5c36;font-weight:500">Подробнее →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="format-card reveal reveal-delay-2" onclick="window.location='partnership.html'">
+      <a href="partnership.html" class="format-card reveal reveal-delay-2">
         <div class="format-badge-row">
           <div class="format-num">03</div>
         </div>
@@ -929,9 +931,9 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
         </ul>
         <div class="format-price" style="display:flex;justify-content:space-between;align-items:center">
           <span>от 300 000 ₽/мес</span>
-          <a href="partnership.html" style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</a>
+          <span style="font-size:12px;color:var(--green);font-weight:500">Подробнее →</span>
         </div>
-      </div>
+      </a>
     </div>
     <p style="font-size:13.5px;color:var(--text-2);margin-top:16px;text-align:center">Большинство клиентов начинают с диагностики и продолжают работу дальше</p>
   </div>
@@ -970,21 +972,21 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
       <a href="https://t.me/nofluff_strategy" class="section-sub">Подписаться</a>
     </div>
     <div class="tg-grid">
-      <div class="tg-post reveal" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+      <a href="https://t.me/nofluff_strategy" target="_blank" class="tg-post reveal">
         <div class="tg-tag">Кейс</div>
         <div class="tg-post-text">Клиент думал, что проблема в маркетинге. Оказалось — в ценообразовании. Как один разговор с отделом продаж изменил диагноз.</div>
         <div class="tg-post-more">Читать в канале</div>
-      </div>
-      <div class="tg-post reveal reveal-delay-1" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+      </a>
+      <a href="https://t.me/nofluff_strategy" target="_blank" class="tg-post reveal reveal-delay-1">
         <div class="tg-tag">Инструмент</div>
         <div class="tg-post-text">Как за 2 часа понять, в каком сегменте бизнес зарабатывает, а в каком — занимает людей без результата.</div>
         <div class="tg-post-more">Читать в канале</div>
-      </div>
-      <div class="tg-post reveal reveal-delay-2" onclick="window.open('https://t.me/nofluff_strategy','_blank')">
+      </a>
+      <a href="https://t.me/nofluff_strategy" target="_blank" class="tg-post reveal reveal-delay-2">
         <div class="tg-tag">Наблюдение</div>
         <div class="tg-post-text">Большинство проблем роста — это не рынок и не команда. Это ценностное предложение, которое перестало работать три года назад.</div>
         <div class="tg-post-more">Читать в канале</div>
-      </div>
+      </a>
     </div>
     <div class="tg-subscribe reveal">
       <div class="tg-sub-left">

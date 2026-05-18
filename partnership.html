@@ -794,6 +794,7 @@ h1.ht{animation:up .6s .12s both}
 <script>
 var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');ro.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+window.addEventListener('pageshow', function(e){ if(e.persisted) document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); });
 function toggleFaq(btn){var item=btn.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open')});if(!isOpen)item.classList.add('open')}
 </script>
 </body>

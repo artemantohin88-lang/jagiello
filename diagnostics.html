@@ -512,6 +512,7 @@ var ro = new IntersectionObserver(function(e){
   e.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); ro.unobserve(x.target); } });
 },{threshold:.1});
 document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+window.addEventListener('pageshow', function(e){ if(e.persisted) document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); });
 
 function toggleFaq(btn) {
   var item = btn.parentElement;
