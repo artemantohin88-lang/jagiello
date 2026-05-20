@@ -234,6 +234,7 @@ footer{border-top:1px solid var(--border);padding:28px 0}
 .fl a:hover{color:var(--text)}
 
 .industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.dark-g{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 @media(max-width:960px){
   .hero-g,.why-g,.symp-grid,.blocks-grid,.whom-g,.obj-grid,.cases-row,.oh-g{grid-template-columns:1fr 1fr}
   .hero-g{grid-template-columns:1fr}
@@ -246,6 +247,7 @@ footer{border-top:1px solid var(--border);padding:28px 0}
   .tl-wrap{padding-left:0}.tl-wrap::before{display:none}.tl-dot{display:none}.tl-item{padding-left:0}
   .oh-items{padding-top:0 !important}
   .industry-grid{grid-template-columns:1fr 1fr}
+  .dark-g{grid-template-columns:1fr;gap:32px}
 }
 @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .crumb{animation:up .5s .05s both}
@@ -363,7 +365,7 @@ h1.ht{animation:up .6s .12s both}
         </div>
       </div>
       <div style="font-size:13px;color:var(--t2);padding-top:16px;border-top:1px solid var(--border)">
-        <strong style="color:var(--text)">Стадия бизнеса:</strong> компания работает 3+ лет, выручка от 200 млн ₽, есть команда — и пора перейти от ручного управления к системному росту
+        <strong style="color:var(--text)">Стадия бизнеса:</strong> компания работает 3+ лет в год, выручка от 200 млн ₽, есть команда — и пора перейти от ручного управления к системному росту
       </div>
     </div>
   </div>
@@ -372,7 +374,7 @@ h1.ht{animation:up .6s .12s both}
 <!-- ЗАЧЕМ НУЖНЫ ИССЛЕДОВАНИЯ — тёмный разрыв -->
 <div class="dark-band">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center" class="reveal">
+    <div class="dark-g reveal">
       <div>
         <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.3);margin-bottom:20px">Из практики</div>
         <div style="font-family:'Instrument Serif',serif;font-size:clamp(20px,2.5vw,28px);color:#fff;line-height:1.35;margin-bottom:16px">Собственник был уверен что проблема в маркетинге. После исследования клиентов выяснилось — проблема в продукте: он не попадал в главный фактор выбора покупателей.</div>
