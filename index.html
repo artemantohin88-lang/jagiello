@@ -82,6 +82,26 @@ nav {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
+
+/* ─── BURGER ─── */
+.nav-burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  width: 36px; height: 36px;
+  border: none; background: transparent;
+  cursor: pointer; padding: 4px;
+  border-radius: 7px;
+  transition: background 0.15s;
+}
+.nav-burger:hover { background: var(--surface-2); }
+.nav-burger span {
+  display: block; width: 18px; height: 1.5px;
+  background: var(--text); border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+nav.open .nav-burger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+nav.open .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.open .nav-burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 .nav-inner {
   max-width: 1180px; margin: 0 auto; padding: 0 32px;
   height: 60px;
@@ -606,16 +626,36 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; }
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
   .nav-inner { padding: 0 20px; }
+  .nav-burger { display: flex; }
   .nav-links { display: none; }
+  nav.open .nav-links {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: rgba(248,246,242,0.97);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 20px 16px;
+    gap: 2px; z-index: 99;
+    list-style: none;
+  }
+  nav.open .nav-links li { width: 100%; }
+  nav.open .nav-links a {
+    display: block; padding: 10px 14px;
+    font-size: 15px; color: var(--text-2);
+    border-radius: 7px;
+  }
+  nav.open .nav-links a:hover { background: var(--surface-2); color: var(--text); }
+  nav.open .nav-links .nav-btn {
+    margin-top: 6px; text-align: center;
+    background: var(--text) !important; color: var(--bg) !important;
+    justify-content: center;
+  }
   .hero { padding: 52px 0 44px; }
   .section { padding: 52px 0; }
   .how-grid, .cases-grid, .formats-grid, .tg-grid { grid-template-columns: 1fr; }
   .stats-inner { flex-wrap: wrap; }
   .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid var(--border); padding: 18px 0; }
   .cta-block { padding: 40px 20px; }
-  .hands-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 640px) {
   .hands-grid { grid-template-columns: 1fr 1fr; }
 }
 /* ── hero entry animations ── */
@@ -627,6 +667,81 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
 .hero-trust    { animation: fadeUp 0.65s 0.42s both; }
 .hero-panel    { animation: fadeUp 0.65s 0.48s both; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jagiello.ru/#person",
+      "name": "Артём Ягелло",
+      "url": "https://jagiello.ru",
+      "jobTitle": "Внешний директор по росту",
+      "description": "Помогаю собственникам найти следующий источник роста и довести его до денег. Работаю с компаниями от 200 млн ₽ выручки в год.",
+      "email": "strategy@jagiello.ru",
+      "sameAs": ["https://t.me/artemcalypso", "https://t.me/nofluff_strategy"],
+      "knowsAbout": ["Стратегический консалтинг", "Рост выручки", "CRM", "Маркетинг", "Коммерческая система"],
+      "address": { "@type": "PostalAddress", "addressCountry": "RU" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jagiello.ru/#service",
+      "name": "Артём Ягелло — Внешний директор по росту",
+      "url": "https://jagiello.ru",
+      "provider": { "@id": "https://jagiello.ru/#person" },
+      "description": "Стратегический консалтинг для среднего и малого бизнеса: нахожу где бизнес теряет деньги и исправляю это руками.",
+      "areaServed": "RU",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Форматы работы",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Стратегическая диагностика", "description": "Финансовый брейкдаун, оценка воронки, клиентской базы и позиционирования. 2–3 недели." },
+            "price": "150000", "priceCurrency": "RUB"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Большая стратегия", "description": "9 направлений: рынок, клиенты, конкуренты, позиция, цена, процессы. Дорожная карта. 6–8 недель." },
+            "price": "900000", "priceCurrency": "RUB"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Партнёрство и внедрение", "description": "Внешний директор по росту на постоянной основе, от 4 месяцев." },
+            "price": "300000", "priceCurrency": "RUB",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "300000", "priceCurrency": "RUB", "unitText": "месяц" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как понять, подходит ли мой бизнес для работы?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Работаю с собственниками компаний с выручкой от 200 млн ₽ в год, где есть реальный запрос на рост и готовность к изменениям. Лучший способ понять — 30-минутный разговор: я честно скажу, вижу ли смысл работать вместе и что именно можно сделать." }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени занимает первый результат?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Зависит от формата. Стратегическая диагностика даёт управленческую ясность уже за 3–5 недель. Первые измеримые изменения в показателях — обычно через 2–4 месяца после начала внедрения. Быстрых чудес не обещаю, но и не растягиваю работу на годы." }
+        },
+        {
+          "@type": "Question",
+          "name": "Работаете ли вы удалённо или только очно?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Работаю в смешанном формате: большинство встреч онлайн, при необходимости — выезды к клиенту. Это не влияет на качество результата — важна система работы, а не физическое присутствие." }
+        },
+        {
+          "@type": "Question",
+          "name": "Как попасть на работу с вами?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Напишите в Telegram — коротко расскажите о бизнесе и задаче. Я отвечу в течение суток и предложу созвониться. Новые проекты беру ограниченно — хочу работать качественно, а не в режиме конвейера." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -634,6 +749,9 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
 <nav>
   <div class="nav-inner">
     <div class="logo">Артём <span class="logo-serif">Ягелло</span></div>
+    <button class="nav-burger" aria-label="Меню" aria-expanded="false" onclick="var n=this.closest('nav');var open=n.classList.toggle('open');this.setAttribute('aria-expanded',open)">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#how">Как работаю</a></li>
       <li><a href="#cases">Кейсы</a></li>
@@ -1144,6 +1262,22 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
 </footer>
 
 <script>
+// Mobile nav — close on link click or outside click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    var n = document.querySelector('nav');
+    n.classList.remove('open');
+    n.querySelector('.nav-burger').setAttribute('aria-expanded', 'false');
+  });
+});
+document.addEventListener('click', e => {
+  var n = document.querySelector('nav');
+  if (n.classList.contains('open') && !n.contains(e.target)) {
+    n.classList.remove('open');
+    n.querySelector('.nav-burger').setAttribute('aria-expanded', 'false');
+  }
+});
+
 // Scroll reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
