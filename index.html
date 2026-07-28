@@ -340,7 +340,9 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   transition: box-shadow 0.2s;
   cursor: pointer;
 }
-.featured-case:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.07); border-color: var(--border-2); }
+@media (hover: hover) {
+  .featured-case:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.07); border-color: var(--border-2); }
+}
 
 .case-visual {
   background: #18160f;
@@ -399,11 +401,14 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
 .cases-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
 .hands-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
 .case-card {
+  display: block;
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden;
   transition: box-shadow 0.2s, border-color 0.2s; cursor: pointer;
 }
-.case-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-color: var(--border-2); }
+@media (hover: hover) {
+  .case-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-color: var(--border-2); }
+}
 .card-header {
   padding: 24px 22px 0;
   display: flex; align-items: center; justify-content: space-between;
@@ -924,7 +929,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
       <span class="section-sub">Все проекты</span>
     </div>
 
-    <div class="featured-case reveal" onclick="window.location='polymer.html'" style="cursor:pointer">
+    <a href="polymer.html" class="featured-case reveal">
       <div class="case-visual">
         <div class="case-co">Компания «Полимер» · Производство</div>
         <div class="case-visual-body">
@@ -948,12 +953,12 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div><div class="cm-num">×2</div><div class="cm-label">снижение доли 1 клиента</div></div>
           <div><div class="cm-num">+30%</div><div class="cm-label">продажи по регионам</div></div>
         </div>
-        <a href="polymer.html" style="font-size:13px;color:#68635a;margin-top:20px;display:inline-block">Открыть кейс →</a>
+        <span style="font-size:13px;color:#68635a;margin-top:20px;display:inline-block">Открыть кейс →</span>
       </div>
-    </div>
+    </a>
 
     <div class="cases-grid">
-      <div class="case-card reveal" onclick="window.location='kitchen.html'" style="cursor:pointer">
+      <a href="kitchen.html" class="case-card reveal">
         <div class="card-header">
           <div class="card-industry">Производство кухонь · 6 мес</div>
           <div class="card-kpi-badge">+16%</div>
@@ -965,8 +970,8 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-meta">«Кухонный двор» · конверсия в продажу</div>
           <div style="margin-top:10px;font-size:13px;color:#68635a">Открыть кейс →</div>
         </div>
-      </div>
-      <div class="case-card reveal reveal-delay-1" onclick="window.location='rsk.html'" style="cursor:pointer">
+      </a>
+      <a href="rsk.html" class="case-card reveal reveal-delay-1">
         <div class="card-header">
           <div class="card-industry">Металлоконструкции · 8 мес</div>
           <div class="card-kpi-badge">+21%</div>
@@ -978,8 +983,8 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-meta">РСК ШАЛЕ · рост выручки</div>
           <div style="margin-top:10px;font-size:13px;color:#68635a">Открыть кейс →</div>
         </div>
-      </div>
-      <div class="case-card reveal reveal-delay-2" onclick="window.location='phygital.html'" style="cursor:pointer">
+      </a>
+      <a href="phygital.html" class="case-card reveal reveal-delay-2">
         <div class="card-header">
           <div class="card-industry">Новый рынок · NDA · 7 мес</div>
           <div class="card-kpi-badge">300+</div>
@@ -991,7 +996,7 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           <div class="card-meta">«Игры будущего» · NDA · центров к 2030</div>
           <div style="margin-top:10px;font-size:13px;color:#68635a">Открыть кейс →</div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
