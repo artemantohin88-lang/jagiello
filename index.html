@@ -436,7 +436,10 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   display: flex; flex-direction: column;
   color: inherit; text-decoration: none;
 }
-.format-card { cursor: pointer; } .format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); transition: box-shadow .2s, transform .2s; }
+.format-card { cursor: pointer; }
+@media (hover: hover) {
+  .format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); transition: box-shadow .2s, transform .2s; }
+}
 .format-card.featured {
   border-color: var(--text); border-width: 1.5px;
   background: var(--text);
