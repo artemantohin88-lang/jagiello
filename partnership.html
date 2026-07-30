@@ -142,6 +142,12 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .cb-amber{background:var(--abg);color:var(--amber);border:1px solid rgba(146,82,12,.15)}
 .cb-grey{background:var(--s2);color:var(--t2);border:1px solid var(--border)}
 .cb-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:currentColor}
+.mchip-blue{background:var(--s2);color:var(--t2);border:1px solid rgba(29,58,95,.15)}
+.mchip-blue .cb-dot{background:var(--blue)}
+.mchip-green{background:var(--s2);color:var(--t2);border:1px solid rgba(26,92,54,.15)}
+.mchip-green .cb-dot{background:var(--green)}
+.mchip-amber{background:var(--s2);color:var(--t2);border:1px solid rgba(146,82,12,.15)}
+.mchip-amber .cb-dot{background:var(--amber)}
 .mcat{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0;width:172px}
 .cycle-repeat{background:rgba(26,92,54,.04);border-top:2px dashed rgba(26,92,54,.2);padding:14px 16px;display:flex;align-items:center;gap:10px}
 .cr-arrow{font-size:18px;color:var(--green)}
@@ -547,27 +553,27 @@ h1.ht{animation:up .6s .12s both}
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:baseline">
           <div class="mcat" style="color:var(--blue)">Финансы</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <div class="cycle-bar cb-blue"><span class="cb-dot"></span>ROS</div>
-            <div class="cycle-bar cb-blue"><span class="cb-dot"></span>Маржинальность по сегментам</div>
-            <div class="cycle-bar cb-blue"><span class="cb-dot"></span>Доля ключевого клиента в выручке</div>
+            <div class="cycle-bar mchip-blue"><span class="cb-dot"></span>ROS</div>
+            <div class="cycle-bar mchip-blue"><span class="cb-dot"></span>Маржинальность по сегментам</div>
+            <div class="cycle-bar mchip-blue"><span class="cb-dot"></span>Доля ключевого клиента в выручке</div>
           </div>
         </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:baseline">
           <div class="mcat" style="color:var(--green)">Команда и процессы</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <div class="cycle-bar cb-green"><span class="cb-dot"></span>Скорость обработки заявок</div>
-            <div class="cycle-bar cb-green"><span class="cb-dot"></span>Средний цикл сделки</div>
-            <div class="cycle-bar cb-green"><span class="cb-dot"></span>Маржа на менеджера</div>
+            <div class="cycle-bar mchip-green"><span class="cb-dot"></span>Скорость обработки заявок</div>
+            <div class="cycle-bar mchip-green"><span class="cb-dot"></span>Средний цикл сделки</div>
+            <div class="cycle-bar mchip-green"><span class="cb-dot"></span>Маржа на менеджера</div>
           </div>
         </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:baseline">
           <div class="mcat" style="color:var(--amber)">Маркетинг и продажи</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <div class="cycle-bar cb-amber"><span class="cb-dot"></span>CAC</div>
-            <div class="cycle-bar cb-amber"><span class="cb-dot"></span>Конверсия по этапам</div>
-            <div class="cycle-bar cb-amber"><span class="cb-dot"></span>ROMI</div>
-            <div class="cycle-bar cb-amber"><span class="cb-dot"></span>LTV</div>
-            <div class="cycle-bar cb-amber"><span class="cb-dot"></span>NPS</div>
+            <div class="cycle-bar mchip-amber"><span class="cb-dot"></span>CAC</div>
+            <div class="cycle-bar mchip-amber"><span class="cb-dot"></span>Конверсия по этапам</div>
+            <div class="cycle-bar mchip-amber"><span class="cb-dot"></span>ROMI</div>
+            <div class="cycle-bar mchip-amber"><span class="cb-dot"></span>LTV</div>
+            <div class="cycle-bar mchip-amber"><span class="cb-dot"></span>NPS</div>
           </div>
         </div>
       </div>
