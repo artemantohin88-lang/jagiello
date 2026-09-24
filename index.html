@@ -162,7 +162,7 @@ nav.open .nav-burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-4
   cursor: pointer; transition: opacity 0.15s, background 0.15s, transform 0.15s;
   white-space: nowrap;
 }
-.btn:hover { transform: translateY(-1px); }
+.btn:hover { transform: translateY(-1px); } .btn:active { transform: scale(0.96); transition: transform 0.1s ease-out; }
 .btn-dark  { background: var(--text); color: var(--bg); }
 .btn-dark:hover { opacity: 0.83; }
 .btn-ghost { background: transparent; color: var(--text); border: 1.5px solid var(--border-2) !important; }
@@ -412,6 +412,7 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
 @media (hover: hover) {
   .case-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-color: var(--border-2); }
 }
+.case-card:active, .featured-case:active { transform: scale(0.99); transition: transform 0.1s ease-out; }
 .card-header {
   padding: 24px 22px 0;
   display: flex; align-items: center; justify-content: space-between;
@@ -448,6 +449,7 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
 @media (hover: hover) {
   .format-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); transition: box-shadow .2s, transform .2s; }
 }
+.format-card:active { transform: scale(0.98); transition: transform 0.1s ease-out; }
 .format-card.featured {
   border-color: var(--text); border-width: 1.5px;
   background: var(--text);
@@ -552,15 +554,12 @@ h1.hero-headline em { font-style: italic; color: var(--text-2); }
   cursor: pointer; display: flex; justify-content: space-between; align-items: center;
   user-select: none; transition: background 0.15s;
 }
-.faq-q:hover { background: var(--surface-2); }
+.faq-q:hover { background: var(--surface-2); } .faq-q:active { background: var(--surface-2); }
 .faq-arrow { color: var(--text-3); font-size: 18px; transition: transform 0.25s; flex-shrink: 0; }
-.faq-a {
-  max-height: 0; overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  font-size: 14px; color: var(--text-2); line-height: 1.65;
-  padding: 0 24px;
-}
-.faq-item.open .faq-a  { max-height: 300px; padding: 0 24px 20px; }
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; font-size: 14px; color: var(--text-2); line-height: 1.65; }
+.faq-a-inner { overflow: hidden; min-height: 0; padding: 0 24px; }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-item.open .faq-a-inner { padding: 0 24px 20px; }
 .faq-item.open .faq-arrow { transform: rotate(45deg); }
 
 /* ════════════════════════════
@@ -638,8 +637,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; }
   .container { padding: 0 20px; }
   .nav-inner { padding: 0 20px; }
   .nav-burger { display: flex; }
-  .nav-links { display: none; }
-  nav.open .nav-links {
+  .nav-links {
     display: flex; flex-direction: column;
     position: absolute; top: 60px; left: 0; right: 0;
     background: rgba(248,246,242,0.97);
@@ -648,6 +646,13 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; }
     padding: 8px 20px 16px;
     gap: 2px; z-index: 99;
     list-style: none;
+    opacity: 0; transform: translateY(-8px) scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+  nav.open .nav-links {
+    opacity: 1; transform: none;
+    pointer-events: auto;
   }
   nav.open .nav-links li { width: 100%; }
   nav.open .nav-links a {
@@ -677,6 +682,11 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
 .hero-cta-row  { animation: fadeUp 0.65s 0.35s both; }
 .hero-trust    { animation: fadeUp 0.65s 0.42s both; }
 .hero-panel    { animation: fadeUp 0.65s 0.48s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1138,28 +1148,28 @@ h1.hero-headline { animation: fadeUp 0.65s 0.15s both; }
           Как понять, подходит ли мой бизнес для работы?
           <span class="faq-arrow">+</span>
         </div>
-        <div class="faq-a">Работаю с собственниками компаний с выручкой от 50 млн ₽ в год, где есть реальный запрос на рост и готовность к изменениям. Лучший способ понять — 30-минутный разговор: я честно скажу, вижу ли смысл работать вместе и что именно можно сделать.</div>
+        <div class="faq-a"><div class="faq-a-inner">Работаю с собственниками компаний с выручкой от 50 млн ₽ в год, где есть реальный запрос на рост и готовность к изменениям. Лучший способ понять — 30-минутный разговор: я честно скажу, вижу ли смысл работать вместе и что именно можно сделать.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           Сколько времени занимает первый результат?
           <span class="faq-arrow">+</span>
         </div>
-        <div class="faq-a">Зависит от формата. Стратегическая диагностика даёт управленческую ясность уже за 3–5 недель. Первые измеримые изменения в показателях — обычно через 2–4 месяца после начала внедрения. Быстрых чудес не обещаю, но и не растягиваю работу на годы.</div>
+        <div class="faq-a"><div class="faq-a-inner">Зависит от формата. Стратегическая диагностика даёт управленческую ясность уже за 3–5 недель. Первые измеримые изменения в показателях — обычно через 2–4 месяца после начала внедрения. Быстрых чудес не обещаю, но и не растягиваю работу на годы.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           Работаете ли вы удалённо или только очно?
           <span class="faq-arrow">+</span>
         </div>
-        <div class="faq-a">Работаю в смешанном формате: большинство встреч онлайн, при необходимости — выезды к клиенту. Это не влияет на качество результата — важна система работы, а не физическое присутствие.</div>
+        <div class="faq-a"><div class="faq-a-inner">Работаю в смешанном формате: большинство встреч онлайн, при необходимости — выезды к клиенту. Это не влияет на качество результата — важна система работы, а не физическое присутствие.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           Как попасть на работу с вами?
           <span class="faq-arrow">+</span>
         </div>
-        <div class="faq-a">Напишите в Telegram — коротко расскажите о бизнесе и задаче. Я отвечу в течение суток и предложу созвониться. Новые проекты беру ограниченно — хочу работать качественно, а не в режиме конвейера.</div>
+        <div class="faq-a"><div class="faq-a-inner">Напишите в Telegram — коротко расскажите о бизнесе и задаче. Я отвечу в течение суток и предложу созвониться. Новые проекты беру ограниченно — хочу работать качественно, а не в режиме конвейера.</div></div>
       </div>
     </div>
   </div>

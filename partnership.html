@@ -52,7 +52,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(248,246,242,.92);backdrop-
 .sk{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:12px}
 .st{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;letter-spacing:-.015em;margin-bottom:32px}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s,transform .15s}
-.btn:hover{transform:translateY(-1px);opacity:.88}
+.btn:hover{transform:translateY(-1px);opacity:.88}.btn:active{transform:scale(.96);transition:transform .1s ease-out}
 .btn-dark{background:var(--text);color:var(--bg)}
 .btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--b2)!important}
 .btn-outline:hover{background:var(--s2)}
@@ -216,10 +216,12 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .faq-item{border-bottom:1px solid var(--border);background:var(--surface)}
 .faq-item:last-child{border-bottom:none}
 .faq-q{padding:20px 24px;font-size:15px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .15s;user-select:none}
-.faq-q:hover{background:var(--s2)}
+.faq-q:hover{background:var(--s2)}.faq-q:active{background:var(--s2)}
 .faq-arr{color:var(--t3);font-size:18px;transition:transform .25s;flex-shrink:0}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:14px;color:var(--t2);line-height:1.65;padding:0 24px}
-.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;font-size:14px;color:var(--t2);line-height:1.65}
+.faq-a-inner{overflow:hidden;min-height:0;padding:0 24px}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-item.open .faq-a-inner{padding:0 24px 20px}
 .faq-item.open .faq-arr{transform:rotate(45deg)}
 
 /* AUTHOR */
@@ -261,6 +263,11 @@ h1.ht{animation:up .6s .12s both}
 .hero-lead{animation-delay:.2s}
 .hero-actions{animation-delay:.28s}
 .price-card{animation-delay:.2s}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
 </style>
 <script type="text/javascript">window._ab_id_=173256</script>
 <script src="https://cdn.botfaqtor.ru/one.js"></script>
@@ -786,15 +793,15 @@ h1.ht{animation:up .6s .12s both}
     <div class="faq-list reveal">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Нужно ли сначала делать диагностику или стратегию?<span class="faq-arr">+</span></div>
-        <div class="faq-a">Необязательно. Первые 2–3 недели я всегда начинаю с погружения: анализирую данные, разговариваю с командой и клиентами. Это и есть экспресс-диагностика внутри проекта. Если вы уже делали стратегию — берём её за основу и сразу переходим к внедрению.</div>
+        <div class="faq-a"><div class="faq-a-inner">Необязательно. Первые 2–3 недели я всегда начинаю с погружения: анализирую данные, разговариваю с командой и клиентами. Это и есть экспресс-диагностика внутри проекта. Если вы уже делали стратегию — берём её за основу и сразу переходим к внедрению.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Как проходит оплата?<span class="faq-arr">+</span></div>
-        <div class="faq-a">Ежемесячно в начале каждого месяца. Работаю по договору с юридическим лицом или ИП. Стоимость фиксируется на весь срок — без пересмотра в процессе. Минимальный контракт — 4 месяца.</div>
+        <div class="faq-a"><div class="faq-a-inner">Ежемесячно в начале каждого месяца. Работаю по договору с юридическим лицом или ИП. Стоимость фиксируется на весь срок — без пересмотра в процессе. Минимальный контракт — 4 месяца.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Можно ли продолжать после 4 месяцев?<span class="faq-arr">+</span></div>
-        <div class="faq-a">Да. Большинство проектов продолжаются — система выстроена, но нужно её поддерживать и развивать. Через 4 месяца обсуждаем формат дальнейшей работы: тот же ритм, или переходим в режим поддержки с меньшим участием.</div>
+        <div class="faq-a"><div class="faq-a-inner">Да. Большинство проектов продолжаются — система выстроена, но нужно её поддерживать и развивать. Через 4 месяца обсуждаем формат дальнейшей работы: тот же ритм, или переходим в режим поддержки с меньшим участием.</div></div>
       </div>
     </div>
   </div>

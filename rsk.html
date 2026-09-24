@@ -280,7 +280,7 @@ h1.htitle em { font-style:italic; color:var(--t2); }
 .cta-block p { font-size:16px; color:rgba(248,246,242,.45); margin-bottom:36px; }
 .btn-row { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
 .btn { display:inline-flex; align-items:center; gap:8px; font-family:inherit; font-size:14px; font-weight:500; padding:12px 24px; border-radius:8px; border:none; cursor:pointer; transition:opacity .15s,transform .15s; }
-.btn:hover { transform:translateY(-1px); opacity:.88; }
+.btn:hover { transform:translateY(-1px); opacity:.88; } .btn:active { transform: scale(0.96); transition: transform 0.1s ease-out; }
 .btn-light { background:var(--bg); color:var(--text); }
 .btn-ghost { background:rgba(255,255,255,.1); color:var(--bg); }
 
@@ -348,6 +348,11 @@ h1.htitle { animation:up .6s .15s both; }
 .hlead    { animation:up .6s .25s both; }
 .hmeta    { animation:up .6s .32s both; }
 .hn-panel { animation:up .6s .4s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
 </style>
 <script type="text/javascript">window._ab_id_=173256</script>
 <script src="https://cdn.botfaqtor.ru/one.js"></script>
