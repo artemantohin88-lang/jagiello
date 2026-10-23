@@ -50,13 +50,13 @@
 
 <!-- Уровень 4: 16 сделок — ширина 144px, x от 118 до 262 -->
 <rect x="118" y="274" width="144" height="56" fill="#f2efe9" rx="6" stroke="#e6e1d9" stroke-width="1"/>
-<text x="132" y="301" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="500" fill="#68635a">Сделка</text>
+<text x="132" y="301" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="500" fill="#5a564d">Сделка</text>
 <text x="190" y="317" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" font-weight="400" fill="#18160f">16</text>
 <!-- Метка снаружи справа -->
-<text x="272" y="305" font-family="Instrument Sans, sans-serif" font-size="11" fill="#a8a29a" font-weight="600">−61%</text>
+<text x="272" y="305" font-family="Instrument Sans, sans-serif" font-size="11" fill="#7e7870" font-weight="600">−61%</text>
 
 <!-- Итог -->
-<text x="190" y="356" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#a8a29a">Итоговая конверсия: <tspan font-weight="600" fill="#18160f">16%</tspan></text>
+<text x="190" y="356" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#7e7870">Итоговая конверсия: <tspan font-weight="600" fill="#18160f">16%</tspan></text>
 
 <!-- ══ ПРАВАЯ ЧАСТЬ ══ -->
 
@@ -64,22 +64,22 @@
 <rect x="436" y="52" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
 <rect x="436" y="52" width="3" height="66" rx="2" fill="#18160f"/>
 <text x="452" y="74" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Скрипты не работают</text>
-<text x="452" y="90" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Менеджеры зачитывают</text>
-<text x="452" y="106" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">характеристики, не продают</text>
+<text x="452" y="90" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">Менеджеры зачитывают</text>
+<text x="452" y="106" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">характеристики, не продают</text>
 
 <!-- Пункт 2 -->
 <rect x="436" y="130" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
 <rect x="436" y="130" width="3" height="66" rx="2" fill="#8b1a1a"/>
 <text x="452" y="152" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Выручка на 2–3 людях</text>
-<text x="452" y="168" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Уйдут — унесут клиентов.</text>
-<text x="452" y="184" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">CRM не заполнена</text>
+<text x="452" y="168" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">Уйдут — унесут клиентов.</text>
+<text x="452" y="184" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">CRM не заполнена</text>
 
 <!-- Пункт 3 -->
 <rect x="436" y="208" width="220" height="66" rx="8" fill="#fff" stroke="#e6e1d9" stroke-width="0.5"/>
 <rect x="436" y="208" width="3" height="66" rx="2" fill="#8b1a1a"/>
 <text x="452" y="230" font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" fill="#18160f">Скорость реакции</text>
-<text x="452" y="246" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">Клиент ждёт часы —</text>
-<text x="452" y="262" font-family="Instrument Sans, sans-serif" font-size="11" fill="#68635a">конкурент уже ответил</text>
+<text x="452" y="246" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">Клиент ждёт часы —</text>
+<text x="452" y="262" font-family="Instrument Sans, sans-serif" font-size="11" fill="#5a564d">конкурент уже ответил</text>
 
 <!-- Пункт 4 зелёный -->
 <rect x="436" y="286" width="220" height="44" rx="8" fill="#eaf2ed" stroke="#1a5c36" stroke-width="0.5"/>
