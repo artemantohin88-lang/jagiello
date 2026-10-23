@@ -40,8 +40,8 @@
   --border:   #e6e1d9;
   --b2:       #cdc6bb;
   --text:     #18160f;
-  --t2:       #68635a;
-  --t3:       #a8a29a;
+  --t2:       #5a564d;
+  --t3:       #7e7870;
   --green:    #1a5c36;
   --gbg:      #eaf2ed;
   --green2:   #2d8a55;
@@ -117,9 +117,9 @@ h1.htitle em { font-style:italic; color:var(--t2); }
   background-size:20px 20px;
 }
 .hn-main > * { position:relative; }
-.hn-main-label { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.35); margin-bottom:16px; }
-.hn-main-from { font-family:'Instrument Serif',serif; font-size:22px; color:rgba(248,246,242,.35); letter-spacing:-.02em; }
-.hn-main-arr { font-size:18px; color:rgba(248,246,242,.18); margin:6px 0; }
+.hn-main-label { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.82); margin-bottom:16px; }
+.hn-main-from { font-family:'Instrument Serif',serif; font-size:22px; color:rgba(248,246,242,.82); letter-spacing:-.02em; }
+.hn-main-arr { font-size:18px; color:rgba(248,246,242,.72); margin:6px 0; }
 .hn-main-to { font-family:'Instrument Serif',serif; font-size:52px; color:#fff; letter-spacing:-.03em; line-height:1; }
 .hn-badge { display:inline-flex; align-items:center; gap:6px; margin-top:14px; background:var(--green2); color:#fff; font-size:15px; font-weight:600; padding:8px 16px; border-radius:7px; }
 
@@ -163,7 +163,7 @@ h1.htitle em { font-style:italic; color:var(--t2); }
 .insight > * { position:relative; }
 .insight-q { font-family:'Instrument Serif',serif; font-size:clamp(22px,3vw,38px); font-weight:400; color:#fff; line-height:1.25; letter-spacing:-.015em; margin-bottom:20px; }
 .insight-q em { font-style:italic; color:var(--green3); }
-.insight-attr { font-size:13px; color:rgba(248,246,242,.4); display:flex; align-items:center; gap:10px; }
+.insight-attr { font-size:13px; color:rgba(248,246,242,.82); display:flex; align-items:center; gap:10px; }
 .insight-attr::before { content:''; width:24px; height:1px; background:rgba(248,246,242,.2); }
 
 /* ══════════════ TIMELINE ══════════════ */
@@ -245,15 +245,15 @@ h1.htitle em { font-style:italic; color:var(--t2); }
 .rev-block::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px); background-size:22px 22px; }
 .rev-block > * { position:relative; }
 .rev-l {}
-.rev-tag { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.3); margin-bottom:14px; }
-.rev-from-num { font-family:'Instrument Serif',serif; font-size:26px; color:rgba(248,246,242,.35); letter-spacing:-.02em; }
-.rev-arrow-txt { font-size:16px; color:rgba(248,246,242,.18); margin:8px 0; }
+.rev-tag { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.72); margin-bottom:14px; }
+.rev-from-num { font-family:'Instrument Serif',serif; font-size:26px; color:rgba(248,246,242,.82); letter-spacing:-.02em; }
+.rev-arrow-txt { font-size:16px; color:rgba(248,246,242,.72); margin:8px 0; }
 .rev-to-num { font-family:'Instrument Serif',serif; font-size:56px; color:#fff; letter-spacing:-.035em; line-height:1; }
 .rev-growth { display:inline-flex; align-items:center; gap:8px; margin-top:16px; background:var(--green2); color:#fff; font-size:16px; font-weight:600; padding:10px 20px; border-radius:8px; }
 .rev-r { display:flex; flex-direction:column; gap:16px; }
 .rev-stat { }
 .rev-sn { font-size:24px; font-weight:600; color:rgba(248,246,242,.85); }
-.rev-sl { font-size:12px; color:rgba(248,246,242,.35); margin-top:3px; }
+.rev-sl { font-size:12px; color:rgba(248,246,242,.82); margin-top:3px; }
 .rev-div { height:1px; background:rgba(255,255,255,.07); }
 
 /* ══ RESULT BAR ══ */
@@ -277,7 +277,7 @@ h1.htitle em { font-style:italic; color:var(--t2); }
 .cta-block::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px); background-size:24px 24px; }
 .cta-block > * { position:relative; }
 .cta-block h2 { font-family:'Instrument Serif',serif; font-size:clamp(26px,3.8vw,46px); font-weight:400; color:var(--bg); margin-bottom:12px; letter-spacing:-.02em; }
-.cta-block p { font-size:16px; color:rgba(248,246,242,.45); margin-bottom:36px; }
+.cta-block p { font-size:16px; color:rgba(248,246,242,.82); margin-bottom:36px; }
 .btn-row { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
 .btn { display:inline-flex; align-items:center; gap:8px; font-family:inherit; font-size:14px; font-weight:500; padding:12px 24px; border-radius:8px; border:none; cursor:pointer; transition:opacity .15s,transform .15s; }
 .btn:hover { transform:translateY(-1px); opacity:.88; } .btn:active { transform: scale(0.96); transition: transform 0.1s ease-out; }
@@ -633,22 +633,22 @@ h1.htitle { animation:up .6s .15s both; }
       <div class="rev-r">
         <div class="rev-stat">
           <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">5 отраслей</div>
-          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Новых целевых рынков вместо одного стагнирующего</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.82);margin-top:3px">Новых целевых рынков вместо одного стагнирующего</div>
         </div>
         <div style="height:1px;background:rgba(255,255,255,.07)"></div>
         <div class="rev-stat">
           <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">4 канала</div>
-          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Системных источника заказов вместо случайных связей</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.82);margin-top:3px">Системных источника заказов вместо случайных связей</div>
         </div>
         <div style="height:1px;background:rgba(255,255,255,.07)"></div>
         <div class="rev-stat">
           <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">Загрузка ↑</div>
-          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Производство перешло из режима простоев в режим плана</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.82);margin-top:3px">Производство перешло из режима простоев в режим плана</div>
         </div>
         <div style="height:1px;background:rgba(255,255,255,.07)"></div>
         <div class="rev-stat">
           <div style="font-size:22px;font-weight:600;color:rgba(248,246,242,.85)">Система</div>
-          <div style="font-size:12px;color:rgba(248,246,242,.35);margin-top:3px">Маркетингово-сбытовая система поддерживает рост без ручного управления</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.82);margin-top:3px">Маркетингово-сбытовая система поддерживает рост без ручного управления</div>
         </div>
       </div>
     </div>
@@ -684,7 +684,7 @@ h1.htitle { animation:up .6s .15s both; }
     <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px"></div>
     <div style="position:relative">
       <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(26px,3.8vw,46px);font-weight:400;color:var(--bg);margin-bottom:12px;letter-spacing:-.02em" class="reveal">Бизнес зависит от нескольких заказчиков?</h2>
-      <p style="font-size:16px;color:rgba(248,246,242,.45);margin-bottom:36px" class="reveal">Разберём как диверсифицировать клиентскую базу и выстроить системный приток заказов</p>
+      <p style="font-size:16px;color:rgba(248,246,242,.82);margin-bottom:36px" class="reveal">Разберём как диверсифицировать клиентскую базу и выстроить системный приток заказов</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap" class="reveal">
         <a href="https://t.me/jagiello_connect_bot" class="tg-cta-button" style="background:var(--bg);color:var(--text);display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>Обсудить ситуацию →</a>
         <a href="index.html" style="background:rgba(255,255,255,.1);color:var(--bg);display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s">← Все кейсы</a>

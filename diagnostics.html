@@ -35,7 +35,7 @@
 :root {
   --bg:#f8f6f2; --surface:#fff; --s2:#f2efe9;
   --border:#e6e1d9; --b2:#cdc6bb;
-  --text:#18160f; --t2:#68635a; --t3:#a8a29a;
+  --text:#18160f; --t2:#5a564d; --t3:#7e7870;
   --green:#1a5c36; --gbg:#eaf2ed; --green2:#2d8a55;
   --red:#8b1a1a; --rbg:#fdf0f0;
   --amber:#92520c; --abg:#fdf3e7;
@@ -90,13 +90,13 @@ h1.ht em { font-style:italic; color:var(--t2); }
 .price-card { background:var(--text); border-radius:16px; padding:36px; position:relative; overflow:hidden; }
 .price-card::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px); background-size:20px 20px; }
 .price-card > * { position:relative; }
-.price-label { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.35); margin-bottom:16px; }
+.price-label { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,246,242,.82); margin-bottom:16px; }
 .price-num { font-family:'Instrument Serif',serif; font-size:56px; color:#fff; letter-spacing:-.04em; line-height:1; }
-.price-period { font-size:14px; color:rgba(248,246,242,.4); margin-top:8px; margin-bottom:24px; }
+.price-period { font-size:14px; color:rgba(248,246,242,.82); margin-top:8px; margin-bottom:24px; }
 .price-includes { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; border-top:1px solid rgba(255,255,255,.1); padding-top:20px; }
 .pi { display:flex; align-items:center; gap:10px; font-size:13.5px; color:rgba(248,246,242,.75); }
 .pi::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green2); flex-shrink:0; }
-.price-note { font-size:12px; color:rgba(248,246,242,.3); margin-top:16px; }
+.price-note { font-size:12px; color:rgba(248,246,242,.72); margin-top:16px; }
 
 /* ══ FOR WHOM ══ */
 .whom-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
@@ -182,7 +182,7 @@ h1.ht em { font-style:italic; color:var(--t2); }
 .cta-block::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px); background-size:24px 24px; }
 .cta-block > * { position:relative; }
 .cta-block h2 { font-family:'Instrument Serif',serif; font-size:clamp(26px,3.8vw,46px); font-weight:400; color:var(--bg); margin-bottom:12px; letter-spacing:-.02em; }
-.cta-block p { font-size:16px; color:rgba(248,246,242,.45); margin-bottom:36px; }
+.cta-block p { font-size:16px; color:rgba(248,246,242,.82); margin-bottom:36px; }
 .cta-row { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
 
 footer { border-top:1px solid var(--border); padding:28px 0; }
@@ -260,7 +260,7 @@ h1.ht { animation:up .6s .12s both; }
             <div class="pi">Презентация с результатами</div>
             <div class="pi">Встреча с разбором — 2 часа</div>
           </div>
-          <div style="font-size:12px;color:rgba(248,246,242,.45);margin-bottom:16px;line-height:1.55">Одно верное решение по итогам окупает диагностику многократно. Неверное — обходится в разы дороже.</div>
+          <div style="font-size:12px;color:rgba(248,246,242,.82);margin-bottom:16px;line-height:1.55">Одно верное решение по итогам окупает диагностику многократно. Неверное — обходится в разы дороже.</div>
           <a href="https://t.me/jagiello_connect_bot" class="btn btn-light tg-cta-button" style="width:100%;justify-content:center" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>Написать в Telegram →</a>
         </div>
       </div>
@@ -304,15 +304,15 @@ h1.ht { animation:up .6s .12s both; }
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px" class="reveal">
       <div>
         <div style="font-family:'Instrument Serif',serif;font-size:48px;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:8px">×10</div>
-        <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Во столько раз дороже обходится неправильное решение по сравнению с его диагностикой</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Во столько раз дороже обходится неправильное решение по сравнению с его диагностикой</div>
       </div>
       <div>
         <div style="font-family:'Instrument Serif',serif;font-size:48px;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:8px">≠</div>
-        <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Большинство проблем роста — это не маркетинг и не команда. Это неправильный диагноз, который ведёт к правильным действиям не в том месте</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Большинство проблем роста — это не маркетинг и не команда. Это неправильный диагноз, который ведёт к правильным действиям не в том месте</div>
       </div>
       <div>
         <div style="font-family:'Instrument Serif',serif;font-size:48px;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:8px">∞</div>
-        <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Компании, которые я разбирал, уже вложили миллионы в то, что не работало. Диагностика нужна именно для того, чтобы бить в правильную точку.</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Компании, которые я разбирал, уже вложили миллионы в то, что не работало. Диагностика нужна именно для того, чтобы бить в правильную точку.</div>
       </div>
     </div>
   </div>

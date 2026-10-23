@@ -35,7 +35,7 @@
 :root{
   --bg:#f8f6f2;--surface:#fff;--s2:#f2efe9;
   --border:#e6e1d9;--b2:#cdc6bb;
-  --text:#18160f;--t2:#68635a;--t3:#a8a29a;
+  --text:#18160f;--t2:#5a564d;--t3:#7e7870;
   --green:#1a5c36;--gbg:#eaf2ed;--green2:#2d8a55;
   --red:#8b1a1a;--rbg:#fdf0f0;
   --amber:#92520c;--abg:#fdf3e7;
@@ -87,14 +87,14 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .price-card{background:var(--text);border-radius:16px;padding:36px;position:relative;overflow:hidden}
 .price-card::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:20px 20px}
 .price-card>*{position:relative}
-.price-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.35);margin-bottom:16px}
+.price-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.82);margin-bottom:16px}
 .price-range{font-family:'Instrument Serif',serif;font-size:42px;color:#fff;letter-spacing:-.04em;line-height:1}
-.price-period{font-size:14px;color:rgba(248,246,242,.4);margin-top:8px;margin-bottom:6px}
-.price-justify{font-size:12px;color:rgba(248,246,242,.45);margin-bottom:20px;line-height:1.55}
+.price-period{font-size:14px;color:rgba(248,246,242,.82);margin-top:8px;margin-bottom:6px}
+.price-justify{font-size:12px;color:rgba(248,246,242,.82);margin-bottom:20px;line-height:1.55}
 .pi-list{display:flex;flex-direction:column;gap:9px;margin-bottom:24px;border-top:1px solid rgba(255,255,255,.1);padding-top:18px}
 .pi{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(248,246,242,.75)}
 .pi::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green2);flex-shrink:0}
-.price-note{font-size:12px;color:rgba(248,246,242,.3);margin-top:12px}
+.price-note{font-size:12px;color:rgba(248,246,242,.72);margin-top:12px}
 
 /* SYMPTOMS */
 .symp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -133,7 +133,7 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .bc5::before{background:linear-gradient(90deg,#8b1a1a,#c44040)}
 .bc6::before{background:linear-gradient(90deg,#1d3a5f,#2d8a55)}
 .bc7::before{background:linear-gradient(90deg,#92520c,#1a5c36)}
-.bc8::before{background:linear-gradient(90deg,#18160f,#68635a)}
+.bc8::before{background:linear-gradient(90deg,#18160f,#5a564d)}
 .bc9::before{background:linear-gradient(90deg,#1a5c36,#52b788)}
 .bc-num{font-family:'Instrument Serif',serif;font-size:28px;font-weight:400;color:rgba(0,0,0,.06);letter-spacing:-.02em;line-height:1;margin-bottom:8px}
 .bc-title{font-size:14.5px;font-weight:600;margin-bottom:6px}
@@ -160,9 +160,9 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .output-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px}
 .output-hero>*{position:relative}
 .oh-g{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.oh-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.3);margin-bottom:12px}
+.oh-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.72);margin-bottom:12px}
 .oh-title{font-family:'Instrument Serif',serif;font-size:34px;color:#fff;letter-spacing:-.025em;line-height:1.1;margin-bottom:12px}
-.oh-desc{font-size:14px;color:rgba(248,246,242,.5);line-height:1.65}
+.oh-desc{font-size:14px;color:rgba(248,246,242,.82);line-height:1.65}
 .oh-items{display:flex;flex-direction:column;gap:12px}
 .oh-item{display:flex;gap:10px;align-items:baseline}
 .oh-item::before{content:'→';color:var(--green2);font-weight:600;flex-shrink:0}
@@ -234,7 +234,7 @@ h1.ht em{font-style:italic;color:var(--t2)}
 .cta-block::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px}
 .cta-block>*{position:relative}
 .cta-block h2{font-family:'Instrument Serif',serif;font-size:clamp(26px,3.8vw,46px);font-weight:400;color:var(--bg);margin-bottom:12px;letter-spacing:-.02em}
-.cta-block p{font-size:16px;color:rgba(248,246,242,.45);margin-bottom:36px}
+.cta-block p{font-size:16px;color:rgba(248,246,242,.82);margin-bottom:36px}
 .cta-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
 footer{border-top:1px solid var(--border);padding:28px 0}
 .fi{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
@@ -393,22 +393,22 @@ h1.ht{animation:up .6s .12s both}
   <div class="wrap">
     <div class="dark-g reveal">
       <div>
-        <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.3);margin-bottom:20px">Из практики</div>
+        <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.72);margin-bottom:20px">Из практики</div>
         <div style="font-family:'Instrument Serif',serif;font-size:clamp(20px,2.5vw,28px);color:#fff;line-height:1.35;margin-bottom:16px">Собственник был уверен что проблема в маркетинге. После исследования клиентов выяснилось — проблема в продукте: он не попадал в главный фактор выбора покупателей.</div>
-        <div style="font-size:13px;color:rgba(248,246,242,.35)">Без исследования потратил бы ещё год на маркетинг — и ничего бы не изменилось</div>
+        <div style="font-size:13px;color:rgba(248,246,242,.82)">Без исследования потратил бы ещё год на маркетинг — и ничего бы не изменилось</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px">
         <div style="border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px">
           <div style="font-size:22px;font-weight:600;color:#fff;margin-bottom:4px">×3</div>
-          <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Потенциал роста выручки, который был обнаружен при минимальной оптимизации показателей финансового брейкдауна</div>
+          <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Потенциал роста выручки, который был обнаружен при минимальной оптимизации показателей финансового брейкдауна</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px">
           <div style="font-size:22px;font-weight:600;color:#fff;margin-bottom:4px">+32%</div>
-          <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Рост выручки в производственной компании — за счёт системной работы с клиентами, ценообразованием и каналами</div>
+          <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Рост выручки в производственной компании — за счёт системной работы с клиентами, ценообразованием и каналами</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px">
           <div style="font-size:22px;font-weight:600;color:#fff;margin-bottom:4px">Данные</div>
-          <div style="font-size:13px;color:rgba(248,246,242,.4);line-height:1.5">Стратегия без данных — это мнение. Данные позволяют бить точно, а не методом проб и ошибок</div>
+          <div style="font-size:13px;color:rgba(248,246,242,.82);line-height:1.5">Стратегия без данных — это мнение. Данные позволяют бить точно, а не методом проб и ошибок</div>
         </div>
       </div>
     </div>
@@ -469,19 +469,19 @@ h1.ht{animation:up .6s .12s both}
         <!-- CJM mini -->
         <div class="bc-viz">
           <svg viewBox="0 0 200 60" width="100%" style="max-height:60px">
-            <defs><marker id="arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6"><path d="M0,0 L6,3 L0,6 Z" fill="#a8a29a"/></marker></defs>
+            <defs><marker id="arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6"><path d="M0,0 L6,3 L0,6 Z" fill="#7e7870"/></marker></defs>
             <circle cx="20" cy="30" r="14" fill="#eef2f8" stroke="#c5d4e8" stroke-width="1.5"/>
             <text x="20" y="26" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#1d3a5f">Осознание</text>
             <text x="20" y="34" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#1d3a5f">потребности</text>
-            <line x1="35" y1="30" x2="52" y2="30" stroke="#a8a29a" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="35" y1="30" x2="52" y2="30" stroke="#7e7870" stroke-width="1" marker-end="url(#arr)"/>
             <circle cx="67" cy="30" r="14" fill="#fdf3e7" stroke="#e8cfa0" stroke-width="1.5"/>
             <text x="67" y="26" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#92520c">Поиск</text>
             <text x="67" y="34" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#92520c">решений</text>
-            <line x1="82" y1="30" x2="99" y2="30" stroke="#a8a29a" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="82" y1="30" x2="99" y2="30" stroke="#7e7870" stroke-width="1" marker-end="url(#arr)"/>
             <circle cx="114" cy="30" r="14" fill="#f3eef8" stroke="#d0bfe8" stroke-width="1.5"/>
             <text x="114" y="26" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#4a1d6b">Оценка</text>
             <text x="114" y="34" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#4a1d6b">вариантов</text>
-            <line x1="129" y1="30" x2="146" y2="30" stroke="#a8a29a" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="129" y1="30" x2="146" y2="30" stroke="#7e7870" stroke-width="1" marker-end="url(#arr)"/>
             <circle cx="161" cy="30" r="14" fill="#eaf2ed" stroke="#b8d9c4" stroke-width="1.5"/>
             <text x="161" y="26" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#1a5c36">Сделка</text>
             <text x="161" y="34" text-anchor="middle" font-size="5.5" font-family="Instrument Sans,sans-serif" fill="#1a5c36">и опыт</text>
@@ -511,14 +511,14 @@ h1.ht{animation:up .6s .12s both}
               <circle cx="0" cy="-36" r="2.5" fill="#1a5c36"/>
               <circle cx="30" cy="-16" r="2.5" fill="#1a5c36"/>
               <circle cx="28" cy="16" r="2.5" fill="#1a5c36"/>
-              <text x="3" y="-42" font-size="6" font-family="Instrument Sans,sans-serif" fill="#68635a">Сервис</text>
-              <text x="33" y="-17" font-size="6" font-family="Instrument Sans,sans-serif" fill="#68635a">Цена</text>
-              <text x="30" y="25" font-size="6" font-family="Instrument Sans,sans-serif" fill="#68635a">Скорость</text>
+              <text x="3" y="-42" font-size="6" font-family="Instrument Sans,sans-serif" fill="#5a564d">Сервис</text>
+              <text x="33" y="-17" font-size="6" font-family="Instrument Sans,sans-serif" fill="#5a564d">Цена</text>
+              <text x="30" y="25" font-size="6" font-family="Instrument Sans,sans-serif" fill="#5a564d">Скорость</text>
             </g>
             <rect x="4" y="88" width="10" height="2" fill="#1a5c36" rx="1"/>
-            <text x="17" y="90" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">Вы</text>
+            <text x="17" y="90" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">Вы</text>
             <rect x="40" y="87" width="10" height="2" fill="#8b1a1a" rx="1" opacity="0.6"/>
-            <text x="53" y="90" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">Конкурент</text>
+            <text x="53" y="90" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">Конкурент</text>
           </svg>
         </div>
         <div class="bc-desc">Анализ продвижения, продаж и сервиса конкурентов. Тайный покупатель — проходим их воронку, фиксируем лучшие практики и слабые места. Сравнение по параметрам важным именно для ваших клиентов.</div>
@@ -533,16 +533,16 @@ h1.ht{animation:up .6s .12s both}
             <!-- 2x2 matrix: integration vs packaging -->
             <rect x="2" y="2" width="95" height="37" rx="4" fill="#eaf2ed" stroke="#b8d9c4" stroke-width="1"/>
             <text x="49" y="16" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#1a5c36" font-weight="600">Интегратор</text>
-            <text x="49" y="27" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#68635a">Проекты под ключ</text>
+            <text x="49" y="27" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#5a564d">Проекты под ключ</text>
             <rect x="103" y="2" width="95" height="37" rx="4" fill="#d4ecdc" stroke="#8dc4a8" stroke-width="1.5"/>
             <text x="150" y="16" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#1a5c36" font-weight="700">Поставщик решений ★</text>
             <text x="150" y="27" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#1a5c36">Результат клиента</text>
             <rect x="2" y="43" width="95" height="35" rx="4" fill="#f2efe9" stroke="#e6e1d9" stroke-width="1"/>
-            <text x="49" y="57" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#68635a">Компоненты</text>
-            <text x="49" y="68" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#a8a29a">Конкуренция по цене</text>
+            <text x="49" y="57" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">Компоненты</text>
+            <text x="49" y="68" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#7e7870">Конкуренция по цене</text>
             <rect x="103" y="43" width="95" height="35" rx="4" fill="#f2efe9" stroke="#e6e1d9" stroke-width="1"/>
-            <text x="150" y="57" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#68635a">Комплекты</text>
-            <text x="150" y="68" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#a8a29a">Удобство закупки</text>
+            <text x="150" y="57" text-anchor="middle" font-size="7.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">Комплекты</text>
+            <text x="150" y="68" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#7e7870">Удобство закупки</text>
           </svg>
         </div>
         <div class="bc-desc">Что продаётся и с какой маржой. Соответствие ассортимента потребностям сегментов. Где выгоднее позиционироваться — поставщик компонентов или поставщик решений. Это напрямую влияет на ценообразование.</div>
@@ -557,16 +557,16 @@ h1.ht{animation:up .6s .12s both}
           <svg viewBox="0 0 200 70" width="100%" style="max-height:70px">
             <rect x="2" y="8" width="60" height="54" rx="6" fill="#eef2f8" stroke="#c5d4e8" stroke-width="1"/>
             <text x="32" y="28" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#1d3a5f" font-weight="700">Резонанс</text>
-            <text x="32" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">«Понимаете</text>
-            <text x="32" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">мою задачу»</text>
+            <text x="32" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">«Понимаете</text>
+            <text x="32" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">мою задачу»</text>
             <rect x="70" y="8" width="60" height="54" rx="6" fill="#eaf2ed" stroke="#b8d9c4" stroke-width="1"/>
             <text x="100" y="28" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#1a5c36" font-weight="700">Отличие</text>
-            <text x="100" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">«Почему вы,</text>
-            <text x="100" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">а не другие»</text>
+            <text x="100" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">«Почему вы,</text>
+            <text x="100" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">а не другие»</text>
             <rect x="138" y="8" width="60" height="54" rx="6" fill="#fdf3e7" stroke="#e8cfa0" stroke-width="1"/>
             <text x="168" y="28" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#92520c" font-weight="700">Вера</text>
-            <text x="168" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">«Доказательства</text>
-            <text x="168" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#68635a">что это правда»</text>
+            <text x="168" y="40" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">«Доказательства</text>
+            <text x="168" y="50" text-anchor="middle" font-size="6.5" font-family="Instrument Sans,sans-serif" fill="#5a564d">что это правда»</text>
           </svg>
         </div>
         <div class="bc-desc">На основе данных о клиентах и конкурентах формируем чёткий ответ «почему вы, а не конкурент» для каждого сегмента. Разные люди покупают по разным причинам — нужны разные аргументы.</div>
@@ -581,8 +581,8 @@ h1.ht{animation:up .6s .12s both}
           <svg viewBox="0 0 200 80" width="100%" style="max-height:80px">
             <line x1="20" y1="70" x2="185" y2="70" stroke="#e6e1d9" stroke-width="1"/>
             <line x1="20" y1="70" x2="20" y2="5" stroke="#e6e1d9" stroke-width="1"/>
-            <text x="100" y="78" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#a8a29a">Воспринимаемая ценность</text>
-            <text x="13" y="38" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#a8a29a" transform="rotate(-90,13,38)">Цена</text>
+            <text x="100" y="78" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#7e7870">Воспринимаемая ценность</text>
+            <text x="13" y="38" text-anchor="middle" font-size="7" font-family="Instrument Sans,sans-serif" fill="#7e7870" transform="rotate(-90,13,38)">Цена</text>
             <line x1="20" y1="68" x2="185" y2="8" stroke="#e6e1d9" stroke-width="1" stroke-dasharray="4,3"/>
             <!-- dots -->
             <circle cx="55" cy="55" r="5" fill="rgba(139,26,26,0.6)"/>
@@ -603,11 +603,11 @@ h1.ht{animation:up .6s .12s both}
         <div class="bc-viz" style="padding:8px 14px">
           <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
             <div style="background:#eef2f8;border:1px solid #c5d4e8;border-radius:5px;padding:4px 8px;font-size:9px;color:#1d3a5f;font-weight:600;white-space:nowrap">1-е касание</div>
-            <div style="font-size:10px;color:#a8a29a">→</div>
+            <div style="font-size:10px;color:#7e7870">→</div>
             <div style="background:#fdf3e7;border:1px solid #e8cfa0;border-radius:5px;padding:4px 8px;font-size:9px;color:#92520c;font-weight:600;white-space:nowrap">Квалификация</div>
-            <div style="font-size:10px;color:#a8a29a">→</div>
+            <div style="font-size:10px;color:#7e7870">→</div>
             <div style="background:#f3eef8;border:1px solid #d0bfe8;border-radius:5px;padding:4px 8px;font-size:9px;color:#4a1d6b;font-weight:600;white-space:nowrap">КП</div>
-            <div style="font-size:10px;color:#a8a29a">→</div>
+            <div style="font-size:10px;color:#7e7870">→</div>
             <div style="background:#eaf2ed;border:1px solid #b8d9c4;border-radius:5px;padding:4px 8px;font-size:9px;color:#1a5c36;font-weight:600;white-space:nowrap">Сделка</div>
           </div>
         </div>
@@ -622,27 +622,27 @@ h1.ht{animation:up .6s .12s both}
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">
             <div style="background:#eaf2ed;border-radius:5px;padding:6px;text-align:center">
               <div style="font-size:8px;font-weight:600;color:#1a5c36;margin-bottom:1px">Сайт + SEO</div>
-              <div style="font-size:7px;color:#68635a">входящий</div>
+              <div style="font-size:7px;color:#5a564d">входящий</div>
             </div>
             <div style="background:#eaf2ed;border-radius:5px;padding:6px;text-align:center">
               <div style="font-size:8px;font-weight:600;color:#1a5c36;margin-bottom:1px">Кейсы + контент</div>
-              <div style="font-size:7px;color:#68635a">доверие</div>
+              <div style="font-size:7px;color:#5a564d">доверие</div>
             </div>
             <div style="background:#eaf2ed;border-radius:5px;padding:6px;text-align:center">
               <div style="font-size:8px;font-weight:600;color:#1a5c36;margin-bottom:1px">Партнёры</div>
-              <div style="font-size:7px;color:#68635a">рефералы</div>
+              <div style="font-size:7px;color:#5a564d">рефералы</div>
             </div>
             <div style="background:#f2efe9;border-radius:5px;padding:6px;text-align:center">
-              <div style="font-size:8px;font-weight:600;color:#68635a;margin-bottom:1px">Выставки</div>
-              <div style="font-size:7px;color:#a8a29a">отрасль</div>
+              <div style="font-size:8px;font-weight:600;color:#5a564d;margin-bottom:1px">Выставки</div>
+              <div style="font-size:7px;color:#7e7870">отрасль</div>
             </div>
             <div style="background:#f2efe9;border-radius:5px;padding:6px;text-align:center">
-              <div style="font-size:8px;font-weight:600;color:#68635a;margin-bottom:1px">Email</div>
-              <div style="font-size:7px;color:#a8a29a">нагрев</div>
+              <div style="font-size:8px;font-weight:600;color:#5a564d;margin-bottom:1px">Email</div>
+              <div style="font-size:7px;color:#7e7870">нагрев</div>
             </div>
             <div style="background:#fdf0f0;border-radius:5px;padding:6px;text-align:center">
               <div style="font-size:8px;font-weight:600;color:#8b1a1a;margin-bottom:1px">Холодные</div>
-              <div style="font-size:7px;color:#a8a29a">низкий ROI</div>
+              <div style="font-size:7px;color:#7e7870">низкий ROI</div>
             </div>
           </div>
         </div>
@@ -660,7 +660,7 @@ h1.ht{animation:up .6s .12s both}
     <div style="font-family:'Instrument Serif',serif;font-size:clamp(20px,3vw,36px);font-weight:400;color:#fff;line-height:1.3;max-width:760px;margin-bottom:20px">
       Девять блоков — это не девять отчётов.<br>Это <em style="font-style:italic;color:#a8d8b8">одна связанная картина</em> с приоритетами:<br>что менять в первую очередь, что подождёт, а от чего отказаться.
     </div>
-    <div style="font-size:14px;color:rgba(248,246,242,.4)">На выходе — дорожная карта с конкретными шагами, исполнителями, сроками и ожидаемым финансовым результатом</div>
+    <div style="font-size:14px;color:rgba(248,246,242,.82)">На выходе — дорожная карта с конкретными шагами, исполнителями, сроками и ожидаемым финансовым результатом</div>
   </div>
 </div>
 
@@ -732,9 +732,9 @@ h1.ht{animation:up .6s .12s both}
               <text x="194" y="34" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#92520c">Высокий эффект</text>
               <text x="194" y="45" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#92520c">Требует ресурсов</text>
               <rect x="2" y="62" width="124" height="57" rx="6" fill="rgba(168,162,154,0.12)" stroke="rgba(168,162,154,0.3)" stroke-width="1"/>
-              <text x="64" y="82" text-anchor="middle" font-size="9.5" font-family="Instrument Sans,sans-serif" fill="#68635a" font-weight="700">ДЕЛЕГИРОВАТЬ</text>
-              <text x="64" y="94" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#68635a">Низкий эффект</text>
-              <text x="64" y="105" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#68635a">Легко сделать</text>
+              <text x="64" y="82" text-anchor="middle" font-size="9.5" font-family="Instrument Sans,sans-serif" fill="#5a564d" font-weight="700">ДЕЛЕГИРОВАТЬ</text>
+              <text x="64" y="94" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#5a564d">Низкий эффект</text>
+              <text x="64" y="105" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#5a564d">Легко сделать</text>
               <rect x="132" y="62" width="124" height="57" rx="6" fill="rgba(139,26,26,0.07)" stroke="rgba(139,26,26,0.2)" stroke-width="1"/>
               <text x="194" y="82" text-anchor="middle" font-size="9.5" font-family="Instrument Sans,sans-serif" fill="#8b1a1a" font-weight="700">ОТКАЗАТЬСЯ</text>
               <text x="194" y="94" text-anchor="middle" font-size="8" font-family="Instrument Sans,sans-serif" fill="#8b1a1a">Низкий эффект</text>
